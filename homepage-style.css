@@ -142,6 +142,7 @@ nav ul li:hover::after{
     padding: 10% 8%;
     flex-direction: column;
     transition: background-color .2s;
+    cursor: pointer;
 }
 
 .menu-card:hover{
@@ -170,6 +171,7 @@ nav ul li:hover::after{
     padding: 10% 8%;
     flex-direction: column;
     transition: background-color .2s;
+    cursor: pointer;
 }
 
 .step-card h2 {
