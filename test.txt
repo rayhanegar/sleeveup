@@ -1,0 +1,3 @@
+This file is made di branch Egar.
+Aku mau push dan commit ke branch origin Egar
+dan mau checkout main buat pull version ini.
