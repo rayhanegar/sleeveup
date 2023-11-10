@@ -8,7 +8,7 @@
     height: 80vh;
     width: 1;
     padding: 2% 5%;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)),url(https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)),url(https://plus.unsplash.com/premium_photo-1677087121017-b779a16ff921?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -37,14 +37,14 @@
     cursor: pointer;
 }
 
-nav{
+nav, footer{
     display: flex;
     padding: 1% 4%;
     justify-content: space-between;
     align-items: center;
 }
 
-nav ul li{
+nav ul li, .container-list-left, .container-list-right{
     list-style: none;
     display: inline-block;
     padding: 8px 12px;
@@ -105,7 +105,7 @@ nav ul li:hover::after{
 .section-header{
     display: flex;
     flex-direction: column;
-    padding: 2% 5%;
+    padding: 3% 5%;
     width: 1;
     align-items: center;
     text-align: center;
@@ -120,3 +120,76 @@ nav ul li:hover::after{
     width: 30%;
 }
 
+.grid-3-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px 300px;
+    gap: 1px;
+    padding: 2% 5%;
+}
+
+.grid-3-step {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px;
+    gap: 1px;
+    padding: 2% 5%;
+}
+
+.menu-card {
+    display: flex;
+    background-color: #ebecef;
+    padding: 10% 8%;
+    flex-direction: column;
+    transition: background-color .2s;
+    cursor: pointer;
+}
+
+.menu-card:hover{
+    background-color: #204ecf;
+    color: white;
+}
+
+.menu-card img {
+    width: fit-content;
+    height: 60px;
+    margin-bottom: 10%;
+}
+
+.menu-card .menu-image .mi1{
+    background-image: url(./image/icon-explore.png);
+}
+
+.menu-card h1 {
+    font-weight: 100;
+    margin-bottom: 5%;
+}
+
+.step-card {
+    display: flex;
+    background-color: #ebecef;
+    padding: 10% 8%;
+    flex-direction: column;
+    transition: background-color .2s;
+    cursor: pointer;
+}
+
+.step-card h2 {
+    margin-bottom: 5%;
+}
+
+.step-card:hover{
+    background-color: #00CC83;
+    color: white;
+}
+
+.contact-container {
+    min-height: 20vh;
+    height: 40vh;
+    width: 1;
+    padding: 2% 5%;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)),url(https://images.unsplash.com/photo-1531973576160-7125cd663d86?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
