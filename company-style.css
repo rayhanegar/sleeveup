@@ -1,0 +1,137 @@
+* {
+    margin:0;
+    padding:0; 
+    font-family: 'Plus Jakarta Sans', sans-serif;
+ }
+ nav, footer{
+    display: flex;
+    padding: 1% 4%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul li, .container-list-left, .container-list-right{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    cursor: pointer;
+}
+nav ul li::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #204ecf;
+    display: block;
+    margin: auto;
+    transition: .5s;
+}
+nav ul li:hover::after{
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: #204ecf;
+    display: block;
+    margin: auto;
+}
+.nav-list-left{
+    flex: 1;
+    text-align: left;
+}
+.nav-list-right{
+    flex: 1;
+    text-align: right;
+}
+.company-container{
+    display: flex;
+    flex-direction: column;
+    padding: 3% 5%;
+    width: 1;
+    height: 50vh;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5%;
+    
+    background-size: auto;
+    color: white;
+}
+
+.image-company{
+    margin-top: 50%;
+    margin-bottom: 30%;
+    margin-left: 10%;
+    margin-right: 90%;
+    border-image-width: 10%;
+    background-image: linear-gradient(rgb(247, 241, 241));
+    ;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 30px;
+    padding-top: 10px;
+}
+.text-box{
+    color: #000000;
+}
+
+.text-box h2{
+    font-size: 42px;
+    font-weight: bold;
+}
+.content{
+    box-shadow: none;
+    border: 3px solid #0e4170;
+    padding: 50px;
+    padding-top: 30px;
+}
+.aboutde{
+    font-size: 16px;
+    font-style: italic;
+}
+.content h2{
+    font-weight: bolder;
+    font-size: 32px;
+}
+
+.wrapper img{
+    max-width: 180px;
+    margin-right: 20px;
+}
+.row p{
+    font-size: 8;
+    font-style: italic;
+}
+.testimoni{
+    margin-top: 30px;
+}
+.testimoni h2{
+    text-align: center;
+    font-weight: bolder;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+.testimoni h2::after{
+    content: '';
+    background: #fff;
+    display: block;
+    height: 3px;
+    width: 170px;
+    margin: 20px auto 5px;
+}
+.profile{
+    align-items: center;
+}
+.profile blockquote{
+    padding: 10px;
+}
+.profile p{
+    font-weight: bold;
+}
+
+.profile img{
+    align-items: center;
+    max-width: 300px;
+    margin: 20px;
+}
