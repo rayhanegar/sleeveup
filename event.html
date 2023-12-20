@@ -1,110 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Course Selection</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.3/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-100">
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.3/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
     <!-- Header Section -->
     <header class="p-4">
-        <h1 class="text-xl font-bold">Eksplor program yang sesuai denganmu</h1>
-        <p class="text-gray-600 py-1">Ratusan alumni Rakamin sudah mendapatkan pekerjaan atau peningkatan karier, ini gilirannmu!</p>
-        <!-- Filter Navigation -->
-        <div class="flex flex-wrap gap-2 my-4">
-            <select class="bg-white border border-gray-300 px-3 py-2 rounded">
-                <option>Major</option>
-            </select>
-            <select class="bg-white border border-gray-300 px-3 py-2 rounded">
-                <option>Level</option>
-            </select>
-            <select class="bg-white border border-gray-300 px-3 py-2 rounded">
-                <option>Format</option>
-            </select>
-        </div>
+      <h1 class="text-xl font-bold">Eksplor program yang sesuai denganmu</h1>
+      <p class="text-gray-600 py-1">
+        Ratusan alumni Rakamin sudah mendapatkan pekerjaan atau peningkatan
+        karier, ini gilirannmu!
+      </p>
+      <!-- Filter Navigation -->
+      <div class="flex flex-wrap gap-2 my-4">
+        <select class="bg-white border border-gray-300 px-3 py-2 rounded">
+          <option>Major</option>
+        </select>
+        <select class="bg-white border border-gray-300 px-3 py-2 rounded">
+          <option>Level</option>
+        </select>
+        <select class="bg-white border border-gray-300 px-3 py-2 rounded">
+          <option>Format</option>
+        </select>
+      </div>
     </header>
     <!-- Main Content Section -->
     <main class="p-4">
-        <!-- Course Card -->
-        <div class="bg-white p-4 rounded-md shadow-md my-4">
-            <img src="https://via.placeholder.com/150" alt="Course Image" class="w-1/3 float-left mr-4 mb-4"/>
-            <div class="p-2">
-                <span class="bg-blue-200 text-blue-800 text-xs px-2 py-1 inline-block rounded">Free Class</span>
-                <p class="text-red-500 text-xs my-2"><i class="fas fa-fire"></i> Login dan dapatkan promo pada program ini</p>
-                <h2 class="font-bold text-lg">Soft Skill - Teamwork and Expectation Management</h2>
-                <p class="text-gray-600">Virtual Internship Experience Certification - Beginner</p>
-            </div>
-            <button class="bg-blue-500 text-white px-4 py-2 mt-4 rounded">View Details</button>
+      <!-- Course Card -->
+      <div class="bg-white p-4 rounded-md shadow-md my-4">
+        <img
+          src="https://via.placeholder.com/150"
+          alt="Course Image"
+          class="w-1/3 float-left mr-4 mb-4"
+        />
+        <div class="p-2">
+          <span
+            class="bg-blue-200 text-blue-800 text-xs px-2 py-1 inline-block rounded"
+            >Free Class</span
+          >
+          <p class="text-red-500 text-xs my-2">
+            <i class="fas fa-fire"></i> Login dan dapatkan promo pada program
+            ini
+          </p>
+          <h2 class="font-bold text-lg">
+            Soft Skill - Teamwork and Expectation Management
+          </h2>
+          <p class="text-gray-600">
+            Virtual Internship Experience Certification - Beginner
+          </p>
         </div>
-        <!-- Additional course cards would be added here -->
+        <button
+          class="bg-blue-500 text-white px-4 py-2 mt-4 rounded"
+          onclick="openModal()"
+        >
+          View Details
+        </button>
+      </div>
+      <!-- Additional course cards would be added here -->
     </main>
-    <div id="modal" class="hidden fixed inset-0 bg-gray-700 bg-opacity-50 overflow-y-auto h-full w-full" onclick="closeModal(event)">
-        <div class="container mx-auto p-4 max-w-2xl mt-24 bg-white rounded-md shadow-lg z-50 overflow-y-auto">
-            <!-- Modal Header -->
-            <div class="flex justify-between items-center py-4 px-6 bg-gray-200">
-                <h2 class="text-xl font-semibold text-gray-700">Course Details</h2>
-                <button class="text-gray-700 font-semibold" onclick="closeModal(event)">&times;</button>
-            </div>
-            <!-- Modal Body -->
-            <div class="p-6">
-                <!-- Course Header -->
-                <div class="flex items-center justify-between">
-                    <h3 class="text-2xl font-bold">Soft Skill - Teamwork and Expectation Management</h3>
-                    <span class="text-lg font-bold text-yellow-500">Gratis</span>
-                </div>
-                <div class="flex gap-4 my-6">
-                    <img src="https://via.placeholder.com/150" alt="Course Image" class="w-1/2 rounded-md" />
-                    <div>
-                        <p class="mb-4"><span class="bg-blue-200 text-blue-800 text-xs px-2 py-1 inline-block rounded">Free Class</span></p>
-                        <p class="text-sm text-gray-500 mb-4"><i class="fas fa-fire text-red-500"></i> Login dan dapatkan promo pada program ini</p>
-                        <div class="bg-yellow-200 p-2 rounded-md">
-                            <p class="text-xs text-yellow-800"><i class="fas fa-star"></i> What's Exciting</p>
-                            <!-- Company Logos -->
-                            <div class="mt-2 grid grid-cols-4 gap-2">
-                                <div class="bg-white p-2 rounded-md shadow-lg">
-                                    <img src="URL_To_Company_Logo" alt="Company Logo" class="h-6"/>
-                                </div>
-                                <!-- More logos here -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Tabs -->
-                <div class="flex gap-4 mt-4">
-                    <button class="px-4 py-2 bg-gray-300 rounded-md font-semibold">Informasi Program</button>
-                    <button class="px-4 py-2 bg-gray-300 rounded-md font-semibold">Lihat Modul</button>
-                </div>
-                <div class="mt-6">
-                    <p class="text-gray-600"><strong>Durasi:</strong> 14 hari</p>
-                    <p class="text-gray-600"><strong>Harga:</strong> Gratis</p>
-                </div>
-                <!-- Action Button -->
-                <div class="mt-6">
-                    <button class="w-full bg-yellow-500 text-white p-3 rounded-md font-bold">Course Details</button>
-                </div>
-            </div>
+    <div
+      id="modal"
+      class="hidden fixed inset-0 bg-gray-700 bg-opacity-50 overflow-y-auto h-full w-full"
+      onclick="closeModal(event)"
+    >
+      <div
+        class="container mx-auto p-4 max-w-2xl mt-24 bg-white rounded-md shadow-lg z-50 overflow-y-auto"
+      >
+        <!-- Modal Header -->
+        <div class="flex justify-between items-center py-4 px-6 bg-gray-200">
+          <h2 class="text-xl font-semibold text-gray-700">Course Details</h2>
+          <button
+            class="text-gray-700 font-semibold"
+            onclick="closeModal(event)"
+          >
+            &times;
+          </button>
         </div>
+        <!-- Modal Body -->
+        <div class="p-6">
+          <!-- Course Header -->
+          <div class="flex items-center justify-between">
+            <h3 class="text-2xl font-bold">
+              Soft Skill - Teamwork and Expectation Management
+            </h3>
+            <span class="text-lg font-bold text-yellow-500">Gratis</span>
+          </div>
+          <div class="flex gap-4 my-6">
+            <img
+              src="https://via.placeholder.com/150"
+              alt="Course Image"
+              class="w-1/2 rounded-md"
+            />
+            <div>
+              <p class="mb-4">
+                <span
+                  class="bg-blue-200 text-blue-800 text-xs px-2 py-1 inline-block rounded"
+                  >Free Class</span
+                >
+              </p>
+              <p class="text-sm text-gray-500 mb-4">
+                <i class="fas fa-fire text-red-500"></i> Login dan dapatkan
+                promo pada program ini
+              </p>
+              <div class="bg-yellow-200 p-2 rounded-md">
+                <p class="text-xs text-yellow-800">
+                  <i class="fas fa-star"></i> What's Exciting
+                </p>
+                <!-- Company Logos -->
+                <div class="mt-2 grid grid-cols-4 gap-2">
+                  <div class="bg-white p-2 rounded-md shadow-lg">
+                    <img
+                      src="URL_To_Company_Logo"
+                      alt="Company Logo"
+                      class="h-6"
+                    />
+                  </div>
+                  <!-- More logos here -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Tabs -->
+          <div class="flex gap-4 mt-4">
+            <button class="px-4 py-2 bg-gray-300 rounded-md font-semibold">
+              Informasi Program
+            </button>
+            <button class="px-4 py-2 bg-gray-300 rounded-md font-semibold">
+              Lihat Modul
+            </button>
+          </div>
+          <div class="mt-6">
+            <p class="text-gray-600"><strong>Durasi:</strong> 14 hari</p>
+            <p class="text-gray-600"><strong>Harga:</strong> Gratis</p>
+          </div>
+          <!-- Action Button -->
+          <div class="mt-6">
+            <button
+              class="w-full bg-yellow-500 text-white p-3 rounded-md font-bold"
+            >
+              Course Details
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
     <script>
-        // Function to open modal
-        function openModal() {
-            document.getElementById('modal').classList.remove('hidden');
-        }
+      // Function to open modal
+      function openModal() {
+        document.getElementById("modal").classList.remove("hidden");
+      }
 
-        // Function to close modal
-        function closeModal(event) {
-            if (event) {
-                const modalContent = document.querySelector('.container');
-                if (modalContent && !modalContent.contains(event.target)) {
-                    document.getElementById('modal').classList.add('hidden');
-                }
-            } else {
-                document.getElementById('modal').classList.add('hidden');
-            }
+      // Function to close modal
+      function closeModal(event) {
+        if (event) {
+          const modalContent = document.querySelector(".container");
+          if (modalContent && !modalContent.contains(event.target)) {
+            document.getElementById("modal").classList.add("hidden");
+          }
+        } else {
+          document.getElementById("modal").classList.add("hidden");
         }
+      }
     </script>
-    <button class="bg-blue-500 text-white px-4 py-2 mt-4 rounded" onclick="openModal()">View Details</button>
-</body>
+  </body>
 </html>

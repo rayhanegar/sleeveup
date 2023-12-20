@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
     <title>SleeveUp - Events</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,9 +10,21 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              plusJakartaSans: [Plus + Jakarta + Sans],
+            },
+          },
+        },
+      };
+    </script>
   </head>
 
-  <body>
+  <body class="font-plusJakartaSans">
     <nav class="flex justify-between items-center py-6 px-4">
       <ul class="flex items-center space-x-4">
         <li><h1 class="text-xl font-bold text-black">SleeveUp!</h1></li>
@@ -38,7 +49,7 @@
             url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1769&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
         "
       >
-        <h1 class="text-3xl mb-3 font-bold font-sh drop-shadow-lg">
+        <h1 class="text-3xl mb-3 font-bold drop-shadow-lg">
           Find the One You Want.
         </h1>
         <p class="px-10 drop-shadow-lg text-lg">
@@ -71,95 +82,155 @@
       </div>
     </section>
 
-    <section id="main-container">
-      <div class="container flex justify-center p-5">
-        <div class="container flex flex-col items-center p-5 w-3/4">
-          <div
-            class="result-card bg-white border-solid border rounded p-4 mb-4 w-full"
+    <!-- Main Content Section -->
+    <main class="p-10 drop-shadow-lg">
+      <!-- Event Card -->
+      <div class="bg-white p-4 rounded-md shadow-md my-4">
+        <img
+          src="assets/event-image.jpg"
+          alt="Course Image"
+          class="w-1/3 float-left mr-4 mb-4"
+        />
+        <div class="p-2">
+          <span
+            class="bg-blue-200 text-blue-800 text-xs px-2 py-1 inline-block rounded"
+            >Free Event</span
           >
-            <div class="result-card-row1 flex justify-between items-center">
-              <div class="result-card-title flex-1">
-                <h2>Event or Workshop or Job Training Title</h2>
-              </div>
-              <div class="result-card-save">
-                <p>Save</p>
-              </div>
-            </div>
-            <div class="result-card-row2 flex items-center space-x-4">
-              <img
-                class="result-card-event-img w-1/2 h-60 rounded"
-                src="assets/event-image.jpg"
-                alt="Event Image"
-              />
-              <div class="result-card-details flex-1">
-                <p class="result-card-companyloc">
-                  This is the organizer or company,<br />Here is the location
-                </p>
-                <p class="result-card-desc">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </div>
-            </div>
-            <input
-              type="checkbox"
-              id="detailsCheckbox"
-              class="details-checkbox hidden"
-            />
-            <label
-              for="detailsCheckbox"
-              class="result-card-button bg-blue-500 text-white p-2 rounded cursor-pointer"
-            >
-              <h3>View Detail</h3>
-            </label>
-            <div
-              class="container flex flex-col items-center bg-white border-solid border rounded p-4 mt-4"
-            >
-              <div class="details-event-info text-center">
-                <h2>Event or Workshop or Job Training Title</h2>
-                <p>
-                  This is the organizer or company,<br />Here is the location
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </div>
-              <img
-                src="assets/QRcode.png"
-                alt="Barcode"
-                class="w-40 h-40 rounded"
-              />
-              <button
-                class="details-register-button bg-green-500 text-white p-2 rounded cursor-pointer"
-              >
-                Register Yourself
-              </button>
-            </div>
-          </div>
+          <p class="text-green-500 text-xs my-2">
+            <i>Organized by <span class="font-bold">DPKA UB</span></i>
+          </p>
+          <h2 class="font-bold text-lg">
+            BRAWIJAYA CAREER EXPO x MALANG RAYA 2023
+          </h2>
+          <p class="text-gray-600">
+            Recruitment, Internships, Scholarships, and Knowledge Sharing
+          </p>
         </div>
+        <button
+          class="bg-blue-500 text-white px-4 py-2 mt-4 rounded"
+          onclick="openModal()"
+        >
+          View Details
+        </button>
       </div>
+    </main>
 
+    <div
+      id="modal"
+      class="hidden fixed inset-0 bg-gray-700 bg-opacity-50 overflow-y-auto h-full w-full"
+      onclick="closeModal(event)"
+    >
       <div
-        class="container min-h-20vh h-40vh w-full p-5 bg-cover bg-gradient-to-r from-white to-transparent relative"
-        style="
-          background-image: url(https://images.unsplash.com/photo-1531973576160-7125cd663d86?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-        "
+        class="container mx-auto p-4 max-w-2xl mt-24 bg-white rounded-md shadow-lg z-50 overflow-y-auto"
       >
-        <div class="container-left-half flex justify-between">
-          <div class="contact-card bg-white p-4 rounded">
-            <div class="menu-image"></div>
-            <strong><p>Contact Info</p></strong>
-            <p>Contact Details</p>
+        <!-- Modal Header -->
+        <div class="flex justify-between items-center py-4 px-6 bg-gray-200">
+          <h2 class="text-xl font-semibold text-gray-700">Event Details</h2>
+          <button
+            class="text-gray-700 font-semibold"
+            onclick="closeModal(event)"
+          >
+            &times;
+          </button>
+        </div>
+        <!-- Modal Body -->
+        <div class="p-6">
+          <!-- Course Header -->
+          <div class="flex items-center justify-between">
+            <h3 class="text-2xl font-bold">
+              BRAWIJAYA CAREER EXPO x MALANG RAYA 2023
+            </h3>
+            <span class="text-lg font-bold text-green-500">Free</span>
           </div>
-          <div class="contact-card bg-white p-4 rounded">
-            <div class="menu-image"></div>
-            <strong><p>Contact Info</p></strong>
-            <p>Contact Details</p>
+          <div class="flex gap-4 my-6">
+            <img
+              src="assets/event-image.jpg"
+              alt="Course Image"
+              class="w-1/2 rounded-md"
+            />
+            <div>
+              <div class="my-2 grid grid-cols-4 gap-2">
+                <div class="bg-white p-2 rounded-md shadow-lg">
+                  <img
+                    src="assets/logoUB.png"
+                    alt="Company Logo"
+                    class="h-6"
+                  />
+                </div>
+              </div>
+              <p class="text-sm text-gray-500 mb-4">
+                Date :
+                <br>Time :
+                <br>Location :
+              </p>
+              <div class="bg-blue-200 p-2 rounded-md">
+                <p class="text-xs text-blue-800">
+                  <i class="font-bold">What's Exciting:</i>
+                  <ol class="text-xs">
+                    <li>- Job Recruitment</li>
+                    <li>- Internship Vacancies</li>
+                    <li>- Scholarships</li>
+                    <li>- Knowledge Sharing</li>
+                  </ol>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Tabs -->
+          <div class="flex gap-4 mt-4">
+            <button class="px-4 py-2 bg-gray-300 rounded-md font-semibold">
+              More Information
+            </button>
+          </div>
+          <!-- Action Button -->
+          <div class="mt-6">
+            <button
+              class="w-full bg-green-500 text-white p-3 rounded-md font-bold"
+            >
+              ! Register Yourself !
+            </button>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+    <script>
+      // Function to open modal
+      function openModal() {
+        document.getElementById("modal").classList.remove("hidden");
+      }
+
+      // Function to close modal
+      function closeModal(event) {
+        if (event) {
+          const modalContent = document.querySelector(".container");
+          if (modalContent && !modalContent.contains(event.target)) {
+            document.getElementById("modal").classList.add("hidden");
+          }
+        } else {
+          document.getElementById("modal").classList.add("hidden");
+        }
+      }
+    </script>
+
+    <div
+      class="container min-h-20vh h-40vh w-full p-5 bg-cover bg-gradient-to-r from-white to-transparent relative"
+      style="
+        background-image: url(https://images.unsplash.com/photo-1531973576160-7125cd663d86?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+      "
+    >
+      <div class="container-left-half flex justify-between">
+        <div class="contact-card bg-white p-4 rounded">
+          <div class="menu-image"></div>
+          <strong><p>Contact Info</p></strong>
+          <p>Contact Details</p>
+        </div>
+        <div class="contact-card bg-white p-4 rounded">
+          <div class="menu-image"></div>
+          <strong><p>Contact Info</p></strong>
+          <p>Contact Details</p>
+        </div>
+      </div>
+    </div>
 
     <footer class="flex justify-between items-center p-4">
       <div class="container-list-left">
