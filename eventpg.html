@@ -84,84 +84,69 @@
 
     <!-- Main Content Section -->
     <main class="p-10 drop-shadow-lg">
-      <!-- Event Card -->
-      <div class="bg-white p-4 rounded-md shadow-md my-4">
-        <img
-          src="assets/event-image.jpg"
-          alt="Course Image"
-          class="w-1/3 float-left mr-4 mb-4"
-        />
-        <div class="p-2">
-          <span
-            class="bg-blue-200 text-blue-800 text-xs px-2 py-1 inline-block rounded"
-            >Free Event</span
-          >
-          <p class="text-green-500 text-xs my-2">
-            <i>Organized by <span class="font-bold">DPKA UB</span></i>
-          </p>
-          <h2 class="font-bold text-lg">
-            BRAWIJAYA CAREER EXPO x MALANG RAYA 2023
-          </h2>
-          <p class="text-gray-600">
-            Recruitment, Internships, Scholarships, and Knowledge Sharing
-          </p>
-        </div>
-        <button
-          class="bg-blue-500 text-white px-4 py-2 mt-4 rounded"
-          onclick="openModal()"
-        >
-          View Details
-        </button>
-      </div>
-    </main>
-
-    <div
-      id="modal"
-      class="hidden fixed inset-0 bg-gray-700 bg-opacity-50 overflow-y-auto h-full w-full"
-      onclick="closeModal(event)"
-    >
-      <div
-        class="container mx-auto p-4 max-w-2xl mt-24 bg-white rounded-md shadow-lg z-50 overflow-y-auto"
-      >
-        <!-- Modal Header -->
-        <div class="flex justify-between items-center py-4 px-6 bg-gray-200">
-          <h2 class="text-xl font-semibold text-gray-700">Event Details</h2>
-          <button
-            class="text-gray-700 font-semibold"
-            onclick="closeModal(event)"
-          >
-            &times;
-          </button>
-        </div>
-        <!-- Modal Body -->
-        <div class="p-6">
-          <!-- Course Header -->
-          <div class="flex items-center justify-between">
-            <h3 class="text-2xl font-bold">
-              BRAWIJAYA CAREER EXPO x MALANG RAYA 2023
-            </h3>
-            <span class="text-lg font-bold text-green-500">Free</span>
-          </div>
-          <div class="flex gap-4 my-6">
+      <!-- Event Card Container -->
+      <div class="container mx-auto">
+        <!-- Event Card -->
+        <div class="bg-white p-4 rounded-lg shadow-md my-4 flex flex-wrap items-center">
+          <!-- Image Container with Responsive Width -->
+          <div class="w-full md:w-1/3 md:pr-4 md:mb-4">
             <img
               src="assets/event-image.jpg"
               alt="Course Image"
-              class="w-1/2 rounded-md"
+              class="w-full h-auto rounded-lg"
             />
+          </div>
+          <div class="p-2 flex-grow">
+            <span
+              class="bg-blue-200 text-blue-800 text-xs px-2 py-1 inline-block rounded-lg mt-2"
+              >Free Event</span
+            >
+            <p class="text-green-500 text-xs my-2">
+              <i>Organized by <span class="font-bold">DPKA UB</span></i>
+            </p>
+            <h2 class="font-bold text-lg">
+              BRAWIJAYA CAREER EXPO x MALANG RAYA 2023
+            </h2>
+            <p class="text-gray-600">
+              Recruitment, Internships, Scholarships, and Knowledge Sharing
+            </p>
+          </div>
+          <button
+            class="bg-blue-500 text-white px-4 py-2 mt-4 rounded-lg"
+            onclick="openModal()"
+          >
+            View Details
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Modal Section -->
+    <div id="modal" class="hidden fixed inset-0 bg-gray-700 bg-opacity-50 overflow-y-auto h-full w-full" onclick="closeModal(event)">
+      <div class="container mx-auto p-4 max-w-2xl mt-24 bg-white rounded-md shadow-lg z-50 overflow-y-auto">
+        <!-- Modal Header -->
+        <div class="flex justify-between items-center py-4 px-6 bg-gray-200">
+          <h2 class="text-xl font-semibold text-gray-700">Event Details</h2>
+          <button class="text-gray-700 font-semibold" onclick="closeModal(event)">&times;</button>
+        </div>
+        <!-- Modal Body -->
+        <div class="p-6">
+          <!-- Event Header -->
+          <div class="flex items-center justify-between">
+            <h3 class="text-2xl font-bold">BRAWIJAYA CAREER EXPO x MALANG RAYA 2023</h3>
+            <span class="text-lg font-bold text-green-500">Free</span>
+          </div>
+          <!-- Event Content -->
+          <div class="flex gap-4 my-6">
+            <img src="assets/event-image.jpg" alt="Event Image" class="w-1/2 rounded-md" />
             <div>
               <div class="my-2 grid grid-cols-4 gap-2">
                 <div class="bg-white p-2 rounded-md shadow-lg">
-                  <img
-                    src="assets/logoUB.png"
-                    alt="Company Logo"
-                    class="h-6"
-                  />
+                  <img src="assets/logoUB.png" alt="Company Logo" class="h-6" />
                 </div>
               </div>
               <p class="text-sm text-gray-500 mb-4">
-                Date :
-                <br>Time :
-                <br>Location :
+                Date: <br>Time: <br>Location:
               </p>
               <div class="bg-blue-200 p-2 rounded-md">
                 <p class="text-xs text-blue-800">
@@ -178,17 +163,11 @@
           </div>
           <!-- Tabs -->
           <div class="flex gap-4 mt-4">
-            <button class="px-4 py-2 bg-gray-300 rounded-md font-semibold">
-              More Information
-            </button>
+            <button class="px-4 py-2 bg-gray-300 rounded-md font-semibold">More Information</button>
           </div>
           <!-- Action Button -->
           <div class="mt-6">
-            <button
-              class="w-full bg-green-500 text-white p-3 rounded-md font-bold"
-            >
-              ! Register Yourself !
-            </button>
+            <button class="w-full bg-green-500 text-white p-3 rounded-md font-bold">! Register Yourself !</button>
           </div>
         </div>
       </div>
@@ -212,12 +191,8 @@
       }
     </script>
 
-    <div
-      class="container min-h-20vh h-40vh w-full p-5 bg-cover bg-gradient-to-r from-white to-transparent relative"
-      style="
-        background-image: url(https://images.unsplash.com/photo-1531973576160-7125cd663d86?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-      "
-    >
+    <!-- Image Section -->
+    <div class="container min-h-20vh h-40vh w-full p-5 bg-cover bg-gradient-to-r from-white to-transparent relative" style="background-image: url(https://images.unsplash.com/photo-1531973576160-7125cd663d86?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
       <div class="container-left-half flex justify-between">
         <div class="contact-card bg-white p-4 rounded">
           <div class="menu-image"></div>
@@ -232,6 +207,7 @@
       </div>
     </div>
 
+    <!-- Footer Section -->
     <footer class="flex justify-between items-center p-4">
       <div class="container-list-left">
         <p>Made with love:</p>
