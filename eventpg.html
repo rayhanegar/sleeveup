@@ -16,7 +16,7 @@
         theme: {
           extend: {
             fontFamily: {
-              plusJakartaSans: [Plus + Jakarta + Sans],
+              plusJakartaSans: ["Plus Jakarta Sans"],
             },
           },
         },
@@ -39,7 +39,7 @@
 
     <section id="hero-container">
       <div
-        class="bg-cover text-white text-center py-24 bg-no-repeat"
+        class="bg-cover text-white text-center py-24 bg-no-repeat bg-center"
         style="
           background-image: linear-gradient(
               to bottom,
@@ -83,11 +83,13 @@
     </section>
 
     <!-- Main Content Section -->
-    <main class="p-10 drop-shadow-lg">
+    <main class="p-10 drop-shadow-lg relative z-10">
       <!-- Event Card Container -->
       <div class="container mx-auto">
         <!-- Event Card -->
-        <div class="bg-white p-4 rounded-lg shadow-md my-4 flex flex-wrap items-center">
+        <div
+          class="bg-white p-4 rounded-lg shadow-lg my-4 flex flex-wrap items-center"
+        >
           <!-- Image Container with Responsive Width -->
           <div class="w-full md:w-1/3 md:pr-4 md:mb-4">
             <img
@@ -102,7 +104,7 @@
               >Free Event</span
             >
             <p class="text-green-500 text-xs my-2">
-              <i>Organized by <span class="font-bold">DPKA UB</span></i>
+              Organized by <span class="font-bold">DPKA UB</span>
             </p>
             <h2 class="font-bold text-lg">
               BRAWIJAYA CAREER EXPO x MALANG RAYA 2023
@@ -122,56 +124,187 @@
     </main>
 
     <!-- Modal Section -->
-    <div id="modal" class="hidden fixed inset-0 bg-gray-700 bg-opacity-50 overflow-y-auto h-full w-full" onclick="closeModal(event)">
-      <div class="container mx-auto p-4 max-w-2xl mt-24 bg-white rounded-md shadow-lg z-50 overflow-y-auto">
+    <div
+      id="modal"
+      class="hidden fixed inset-0 bg-black bg-opacity-70 overflow-y-auto h-full w-full flex items-center justify-center z-50"
+      onclick="closeModal(event)"
+    >
+      <div
+        class="container mx-auto p-4 max-w-2xl bg-white rounded-md shadow-lg z-50 overflow-y-auto"
+      >
         <!-- Modal Header -->
-        <div class="flex justify-between items-center py-4 px-6 bg-gray-200">
+        <div
+          class="flex justify-between items-center py-4 px-6 bg-gray-200 rounded-lg"
+        >
           <h2 class="text-xl font-semibold text-gray-700">Event Details</h2>
-          <button class="text-gray-700 font-semibold" onclick="closeModal(event)">&times;</button>
+          <button
+            class="text-gray-700 font-semibold"
+            onclick="closeModal(event)"
+          >
+            &times;
+          </button>
         </div>
         <!-- Modal Body -->
         <div class="p-6">
           <!-- Event Header -->
           <div class="flex items-center justify-between">
-            <h3 class="text-2xl font-bold">BRAWIJAYA CAREER EXPO x MALANG RAYA 2023</h3>
+            <h3 class="text-2xl font-bold">
+              BRAWIJAYA CAREER EXPO x MALANG RAYA 2023
+            </h3>
             <span class="text-lg font-bold text-green-500">Free</span>
           </div>
           <!-- Event Content -->
           <div class="flex gap-4 my-6">
-            <img src="assets/event-image.jpg" alt="Event Image" class="w-1/2 rounded-md" />
+            <img
+              src="assets/event-image.jpg"
+              alt="Event Image"
+              class="w-1/2 rounded-lg"
+            />
             <div>
-              <div class="my-2 grid grid-cols-4 gap-2">
-                <div class="bg-white p-2 rounded-md shadow-lg">
-                  <img src="assets/logoUB.png" alt="Company Logo" class="h-6" />
+              <div class="my-2 flex items-center">
+                <div
+                  class="bg-white p-2 rounded-md shadow-lg flex items-center"
+                >
+                  <img src="assets/dpkaUB.png" alt="Company Logo" class="h-6" />
+                  <span class="ml-3 text-xs text-gray-500"
+                    >DPKA University of Brawijaya</span
+                  >
                 </div>
               </div>
               <p class="text-sm text-gray-500 mb-4">
-                Date: <br>Time: <br>Location:
+                <span class="font-bold">🗓️ Day, date:</span><br />
+                Monday - Friday, 25 - 29 December 2023<br />
+                <span class="font-bold">🕒 Time:</span><br />
+                09.00 - 16.00 WIB<br />
+                <span class="font-bold">📌 Location:</span><br />
+                Samantha Krida Building, University of Brawijaya
               </p>
               <div class="bg-blue-200 p-2 rounded-md">
-                <p class="text-xs text-blue-800">
+                <p class="text-sm text-blue-800">
                   <i class="font-bold">What's Exciting:</i>
-                  <ol class="text-xs">
-                    <li>- Job Recruitment</li>
-                    <li>- Internship Vacancies</li>
-                    <li>- Scholarships</li>
-                    <li>- Knowledge Sharing</li>
-                  </ol>
                 </p>
+                <ul class="text-sm">
+                  <li>Job Recruitment</li>
+                  <li>Internship Vacancies</li>
+                  <li>Scholarships</li>
+                  <li>Knowledge Sharing</li>
+                </ul>
               </div>
             </div>
           </div>
-          <!-- Tabs -->
-          <div class="flex gap-4 mt-4">
-            <button class="px-4 py-2 bg-gray-300 rounded-md font-semibold">More Information</button>
+          <!-- More Info and Scan Me -->
+          <div class="flex justify-between mt-4">
+            <!-- Left side: More Information -->
+            <div class="flex flex-col">
+              <div
+                class="px-4 py-2 bg-gray-300 rounded-lg font-semibold mb-4 text-md"
+              >
+                More Information
+              </div>
+              <!-- Social Media Links -->
+              <div class="flex flex-col space-y-2 text-sm">
+                <a
+                  href="https://www.instagram.com/karir.ub/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-blue-500 hover:underline"
+                >
+                  Instagram
+                </a>
+                <a
+                  href="https://twitter.com/karir_ub"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-blue-400 hover:underline"
+                >
+                  Twitter
+                </a>
+                <a
+                  href="https://web.facebook.com/karir.ub.official"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-blue-800 hover:underline"
+                >
+                  Facebook
+                </a>
+                <a
+                  href="https://careerexpo.ub.ac.id/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-yellow-500 hover:underline"
+                >
+                  Career Expo Website
+                </a>
+                <a
+                  href="https://dpka.ub.ac.id/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-yellow-400 hover:underline"
+                >
+                  DPKA Website
+                </a>
+              </div>
+            </div>
+            <!-- Right side: Scan Me and QRCode Image -->
+            <div class="flex flex-col justify-center items-center">
+              <div class="px-4 py-2 bg-gray-300 rounded-lg font-semibold">
+                Scan Me!
+              </div>
+              <img
+                src="assets/qrcodeBCE.png"
+                alt="QRCode Image"
+                class="w-40 h-w-40"
+              />
+            </div>
           </div>
           <!-- Action Button -->
           <div class="mt-6">
-            <button class="w-full bg-green-500 text-white p-3 rounded-md font-bold">! Register Yourself !</button>
+            <button
+              class="w-full bg-green-500 text-white p-3 rounded-lg font-bold hover:bg-green-900 active:bg-green-900 focus:outline-none focus:ring focus:ring-green-500"
+            >
+              ❗Register Yourself Now❗
+            </button>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Contact Person Section -->
+    <div
+      class="w-full bg-center px-5 py-24 bg-cover bg-no-repeat"
+      style="
+        background-image: linear-gradient(
+            to left,
+            rgba(0, 0, 0, 0),
+            rgb(255, 255, 255)
+          ),
+          url('https://images.unsplash.com/photo-1531973576160-7125cd663d86?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+      "
+    >
+      <div class="p-4">
+        <div class="menu-image"></div>
+        <strong><p>Contact Info</p></strong>
+        <p>Contact Details</p>
+      </div>
+      <div class="p-4">
+        <div class="menu-image"></div>
+        <strong><p>Contact Info</p></strong>
+        <p>Contact Details</p>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="flex justify-between items-center px-4 py-6">
+      <div class="container-list-left">
+        <p>Made with love:</p>
+        <h3 class="font-bold">SleeveUp!</h3>
+      </div>
+      <div class="container-list-right">
+        <p>A part of</p>
+        <h3 class="font-bold">Brawijaya University</h3>
+      </div>
+    </footer>
+
     <script>
       // Function to open modal
       function openModal() {
@@ -190,33 +323,5 @@
         }
       }
     </script>
-
-    <!-- Image Section -->
-    <div class="container min-h-20vh h-40vh w-full p-5 bg-cover bg-gradient-to-r from-white to-transparent relative" style="background-image: url(https://images.unsplash.com/photo-1531973576160-7125cd663d86?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
-      <div class="container-left-half flex justify-between">
-        <div class="contact-card bg-white p-4 rounded">
-          <div class="menu-image"></div>
-          <strong><p>Contact Info</p></strong>
-          <p>Contact Details</p>
-        </div>
-        <div class="contact-card bg-white p-4 rounded">
-          <div class="menu-image"></div>
-          <strong><p>Contact Info</p></strong>
-          <p>Contact Details</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer Section -->
-    <footer class="flex justify-between items-center p-4">
-      <div class="container-list-left">
-        <p>Made with love:</p>
-        <h3>SleeveUp!</h3>
-      </div>
-      <div class="container-list-right">
-        <p>A part of</p>
-        <h3>Brawijaya University</h3>
-      </div>
-    </footer>
   </body>
 </html>
