@@ -16,6 +16,7 @@
       }
     </style>
   </head>
+
   <body>
     <!-- Navbar Section -->
     <nav
@@ -27,7 +28,7 @@
             <h1
               class="text-xl font-bold text-black md:text-2xl cursor-pointer relative group"
             >
-              SleeveUp!
+              <a href="./homepage.html">SleeveUp!</a>
               <span
                 class="absolute inset-x-0 bottom-0 h-1 bg-blue-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom duration-500"
               ></span>
@@ -39,11 +40,8 @@
               class="absolute inset-x-0 bottom-0 h-1 bg-blue-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom duration-500"
             ></span>
           </li>
-          <li
-            class="cursor-pointer relative group"
-            onclick="openRatingFeedbackPopup()"
-          >
-            Feedback
+          <li class="cursor-pointer relative group">
+            <a href="./feedbackpage.html">Feedback</a>
             <span
               class="absolute inset-x-0 bottom-0 h-1 bg-blue-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom duration-500"
             ></span>
@@ -51,13 +49,13 @@
         </ul>
         <ul class="flex items-center space-x-4 md:space-x-6">
           <li class="cursor-pointer relative group">
-            Register
+            <a href="./signup.html">Register</a>
             <span
               class="absolute inset-x-0 bottom-0 h-1 bg-blue-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom duration-500"
             ></span>
           </li>
           <li class="cursor-pointer relative group">
-            Sign-in
+            <a href="./signup.html">Sign-in</a>
             <span
               class="absolute inset-x-0 bottom-0 h-1 bg-blue-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom duration-500"
             ></span>
@@ -222,109 +220,6 @@
       </div>
     </section>
 
-    <!-- Rating and Feedback Popup -->
-    <div
-      id="ratingFeedbackPopup"
-      class="hidden fixed inset-0 bg-black bg-opacity-70 overflow-y-auto h-full w-full flex items-center justify-center z-50"
-    >
-      <div
-        class="container mx-auto p-4 max-w-2xl bg-white rounded-lg drop-shadow-lg z-50"
-        style="margin-left: 5vh; margin-right: 5vh"
-      >
-        <!-- Popup Header -->
-        <div
-          class="flex justify-between items-center py-4 px-6 bg-gray-200 rounded-lg"
-        >
-          <h2 class="text-xl font-semibold text-gray-700">
-            Rating and Feedback
-          </h2>
-          <button
-            class="text-gray-700 font-semibold"
-            onclick="closeRatingFeedbackPopup()"
-          >
-            ✖️
-          </button>
-        </div>
-        <!-- Popup Body -->
-        <div class="p-6">
-          <!-- Star Ratings -->
-          <div class="flex items-center space-x-4 mb-4 justify-center">
-            <img
-              src="assets/star.png"
-              alt="Star"
-              class="w-12 h-12 md:w-16 md:h-16 cursor-pointer transform hover:scale-125 transition duration-500 ease-in-out"
-              onclick="rate(1)"
-            />
-            <img
-              src="assets/star.png"
-              alt="Star"
-              class="w-12 h-12 md:w-16 md:h-16 cursor-pointer transform hover:scale-125 transition duration-500 ease-in-out"
-              onclick="rate(2)"
-            />
-            <img
-              src="assets/star.png"
-              alt="Star"
-              class="w-12 h-12 md:w-16 md:h-16 cursor-pointer transform hover:scale-125 transition duration-500 ease-in-out"
-              onclick="rate(3)"
-            />
-            <img
-              src="assets/star.png"
-              alt="Star"
-              class="w-12 h-12 md:w-16 md:h-16 cursor-pointer transform hover:scale-125 transition duration-500 ease-in-out"
-              onclick="rate(4)"
-            />
-            <img
-              src="assets/star.png"
-              alt="Star"
-              class="w-12 h-12 md:w-16 md:h-16 cursor-pointer transform hover:scale-125 transition duration-500 ease-in-out"
-              onclick="rate(5)"
-            />
-          </div>
-          <!-- Display Rating Score -->
-          <div class="mb-6 text-center">
-            <p class="text-sm font-semibold">
-              Your Rating: <span id="ratingScore">0</span> / 5
-            </p>
-          </div>
-          <!-- Feedback Text Field -->
-          <textarea
-            id="feedbackInput"
-            class="w-full p-2 border border-gray-300 rounded-lg mb-4 placeholder:italic"
-            placeholder="Kindly give us your feedback..."
-          ></textarea>
-          <!-- Buttons: Later and Send -->
-          <div class="flex justify-end">
-            <button
-              class="bg-gray-200 text-gray-500 hover:text-white px-4 py-2 mr-2 rounded-lg hover:bg-gray-700 active:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-500"
-              onclick="closeRatingFeedbackPopup()"
-            >
-              Later
-            </button>
-            <button
-              class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-700 active:bg-green-700 focus:outline-none focus:ring focus:ring-green-500"
-              onclick="sendRatingFeedback()"
-            >
-              Send
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Submit Feedback Popup -->
-    <div
-      id="submitFeedback"
-      class="hidden fixed inset-0 bg-black bg-opacity-70 overflow-y-auto h-full w-full flex items-center justify-center z-50"
-    >
-      <div class="bg-white p-4 rounded-lg shadow-lg">
-        <p class="text-center text-lg md:text-2xl font-semibold">
-          ✨ Thank You ✨<br />
-          <span class="text-sm md:text-base font-normal"
-            >Your rating and feedback have been noted.</span
-          >
-        </p>
-      </div>
-    </div>
-
     <!-- Contact Person Section -->
     <div
       class="w-full bg-center px-5 py-24 bg-cover bg-no-repeat"
@@ -460,38 +355,6 @@
       function refreshPage() {
         // Add your logic to refresh the page here
         location.reload();
-      }
-
-      // Function to open rating and feedback popup
-      function openRatingFeedbackPopup() {
-        document
-          .getElementById("ratingFeedbackPopup")
-          .classList.remove("hidden");
-      }
-
-      // Function to close rating and feedback popup
-      function closeRatingFeedbackPopup() {
-        document.getElementById("ratingFeedbackPopup").classList.add("hidden");
-      }
-
-      // Function to handle star rating
-      function rate(stars) {
-        console.log(`User rated with ${stars} stars`);
-        // Update the displayed rating score
-        document.getElementById("ratingScore").innerText = stars;
-      }
-
-      // Function to handle sending rating and feedback
-      function sendRatingFeedback() {
-        console.log("Sending rating and feedback...");
-
-        document.getElementById("submitFeedback").classList.remove("hidden");
-        setTimeout(() => {
-          document.getElementById("submitFeedback").classList.add("hidden");
-        }, 3000); // Hide the popup after 3 seconds
-
-        // Close the rating and feedback popup
-        closeRatingFeedbackPopup();
       }
 
       // Make blur effect on navbar

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>
             SleeveUp - Homepage
         </title>
@@ -9,20 +11,31 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
         <script src="navigation.js"></script>
+        <style>
+            /* Styling for the anchor tag */
+            a {
+              text-decoration: none; /* Remove underline */
+              color: black; /* Set your desired text color */
+            }
+          </style>
     </head>
     <body>
         <header>
             <nav>
                 <ul class="nav-list-left">
-                    <li><h1 class="sleeve-up-nav">SleeveUp!</h1></li>
-                    <li>Chatbot</li>
-                    <li>Feedback</li>
+                  <li>
+                    <h1 class="sleeve-up-nav" id="sleeveUpNav">
+                      <a href="./homepage.html">SleeveUp!</a>
+                    </h1>
+                  </li>
+                  <li><a href="./chatbotpage.html">Chatbot</a></li>
+                  <li><a href="./feedbackpage.html">Feedback</a></li>
                 </ul>
                 <ul class="nav-list-right">
-                    <li>Register</li>
-                    <li>Sign-in</li>
+                  <li><a href="./signup.html">Register</a></li>
+                  <li><a href="./signup.html">Sign-in</a></li>
                 </ul>
-            </nav>
+              </nav>
         </header>
         <div class="hero-container">
             <div class="container-left-half">
@@ -36,7 +49,7 @@
         </div>
         <div class="leading-companies-container">
             <div class="leading-companies-container-header">Leading Companies</div>
-            <div class="companies-img"><img src=></div>
+            <div class="companies-img"></div>
             <div class="companies-img"></div>
             <div class="companies-img"></div>
             <div class="companies-img"></div>
@@ -51,32 +64,32 @@
         <div class="container">
             <div class="grid-3-menu">
                 <div class="menu-card" id="exploreBtn">
-                    <img src="./image/icon-explore.png">
+                    <img src="./image/icon-explore.png" alt="Explore Icon">
                     <h1>Explore</h2>
                     <p>A brief description of the Explore page</p>
                 </div>
                 <div class="menu-card">
-                    <img src="./image/icon-perusahaan.png">
+                    <img src="./image/icon-perusahaan.png" alt="Company Icon">
                     <h1>Perusahaan</h2>
                     <p>A brief description of the Perusahaan page</p>
                 </div>
                 <div class="menu-card">
-                    <img src="./image/icon-cvstudio.png">
+                    <img src="./image/icon-cvstudio.png" alt="CV Studi Icon">
                     <h1>CV Studio</h2>
                     <p>A brief description of the CV studio page</p>
                 </div>
                 <div class="menu-card">
-                    <img src="./image/icon-sinaustudio.png">
+                    <img src="./image/icon-sinaustudio.png" alt="Sinau Studio Icon">
                     <h1>Sinau Studio</h2>
                     <p>A brief description of the Sinau Studio page</p>
                 </div>
                 <div class="menu-card">
-                    <img src="./image/icon-rekomendasi.png">
+                    <img src="./image/icon-rekomendasi.png" alt="Recommendation Icon">
                     <h1>Rekomendasi</h2>
                     <p>A brief description of the Rekomendasi page</p>
                 </div>
                 <div class="menu-card">
-                    <img src="./image/icon-profile.png">
+                    <img src="./image/icon-profile.png" alt="Profile Icon">
                     <h1>Profile</h2>
                     <p>A brief description of the Profile page</p>
                 </div>   
@@ -115,19 +128,19 @@
             <div class="container-left-half">
                 <div class="contact-card">
                     <div class="menu-image"></div>
-                    <strong><p>Contact Info</p></strong>
-                    <p>Contact Details</p>
+                    <strong><p>📞 Contact Person</p></strong>
+                    <p>+62 85736498376</p>
                 </div>
                 <div class="contact-card">
                     <div class="menu-image"></div>
-                    <strong><p>Contact Info</p></strong>
-                    <p>Contact Details</p>
+                    <strong><p>✉️ Email Address</p></strong>
+                    <p>sleeveup@gmail.com</p>
                 </div>
             </div>
         </div>
         <footer>
             <div class="container-list-left">
-                <p>Made with love:</p>
+                <p>Made with ❤️:</p>
                 <h3>SleeveUp!</h3>
             </div>
             <div class="container-list-right">
