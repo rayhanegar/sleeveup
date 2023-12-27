@@ -35,7 +35,7 @@
             </h1>
           </li>
           <li class="cursor-pointer relative group">
-            Chatbot
+            <a href="./chatbotpage.html">Chatbot</a>
             <span
               class="absolute inset-x-0 bottom-0 h-1 bg-blue-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom duration-500"
             ></span>
@@ -77,7 +77,7 @@
               rgba(0, 0, 0, 0),
               rgba(0, 0, 0, 1)
             ),
-            url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1769&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
         "
       >
         <h1 class="text-3xl md:text-5xl mb-3 font-bold drop-shadow-lg">
@@ -118,8 +118,9 @@
       </div>
     </section>
 
+    <!-- CARD 1 -->
     <!-- Main Content Section -->
-    <main class="p-10 drop-shadow-lg relative z-10">
+    <main class="py-5 px-10 drop-shadow-lg relative z-10">
       <!-- Event Card Container -->
       <div class="container mx-auto rounded-lg">
         <!-- Event Card -->
@@ -128,8 +129,8 @@
         >
           <div class="w-full md:max-w-80 md:pr-4 md:mb-4 lg:mb-0 lg:ml-5">
             <img
-              src="assets/event-image.jpg"
-              alt="Course Image"
+              src="assets/BCEposter.png"
+              alt="Event Image"
               class="w-full h-auto rounded-lg object-cover object-center"
             />
           </div>
@@ -145,12 +146,13 @@
               <img
                 src="assets/save.png"
                 alt="Bookmark Icon"
-                class="h-6 w-6 cursor-pointer ml-2 hover:bg-gray-300 active:bg-gray-500 focus:outline-none focus:ring focus:ring-gray-900"
-                onclick="saveEvent()"
+                id="save1"
+                class="h-6 w-6 cursor-pointer ml-2 hover:bg-gray-300 active:bg-gray-500 focus:outline-none focus:ring focus:ring-gray-900 transform hover:scale-125 transition duration-500 ease-in-out"
+                onclick="saveEvent('eventSavedPopup1')"
               />
             </div>
             <div
-              id="eventSavedPopup"
+              id="eventSavedPopup1"
               class="hidden absolute bottom-60 right-12 bg-white p-2 rounded-lg drop-shadow-lg text-xs md:bottom-72 md:right-20"
             >
               Event saved!
@@ -168,8 +170,8 @@
             </p>
           </div>
           <button
-            class="bg-blue-500 text-white px-4 py-2 mt-4 rounded-lg hover:bg-blue-900 active:bg-blue-900 focus:outline-none focus:ring focus:ring-blue-500 md:mr-5"
-            onclick="openModal()"
+            class="bg-blue-500 text-white px-4 py-2 mt-4 rounded-lg hover:bg-blue-900 active:bg-blue-900 focus:outline-none focus:ring focus:ring-blue-500 md:mr-5 transform hover:scale-105 transition duration-500 ease-in-out"
+            onclick="openModal('modal 1')"
           >
             View Details
           </button>
@@ -177,11 +179,12 @@
       </div>
     </main>
 
+    <!-- CARD 1 -->
     <!-- Modal Section -->
     <div
-      id="modal"
+      id="modal 1"
       class="hidden fixed inset-0 bg-black bg-opacity-70 overflow-y-auto h-full w-full flex items-center justify-center z-50"
-      onclick="closeModal(event)"
+      onclick="closeModal(event, 'modal 1')"
     >
       <div
         class="container mx-auto p-4 max-w-2xl bg-white rounded-lg drop-shadow-lg z-50 overflow-y-auto"
@@ -199,7 +202,7 @@
           <h2 class="text-xl font-semibold text-gray-700">Event Details</h2>
           <button
             class="text-gray-700 font-semibold"
-            onclick="closeModal(event)"
+            onclick="closeModal(event, 'modal 1')"
           >
             ✖️
           </button>
@@ -216,7 +219,7 @@
           <!-- Event Content -->
           <div class="flex gap-4 my-6">
             <img
-              src="assets/event-image.jpg"
+              src="assets/BCEposter.png"
               alt="Event Image"
               class="w-1/2 rounded-lg object-cover object-center"
             />
@@ -267,41 +270,41 @@
                   href="https://www.instagram.com/karir.ub/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-blue-500 hover:underline"
+                  class="hover:underline"
                 >
-                  Instagram
+                  🎴 Instagram
                 </a>
                 <a
                   href="https://twitter.com/karir_ub"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-blue-400 hover:underline"
+                  class="hover:underline"
                 >
-                  Twitter
+                  🃏 Twitter
                 </a>
                 <a
                   href="https://web.facebook.com/karir.ub.official"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-blue-800 hover:underline"
+                  class="hover:underline"
                 >
-                  Facebook
+                  🀄 Facebook
                 </a>
                 <a
                   href="https://careerexpo.ub.ac.id/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-yellow-500 hover:underline"
+                  class="hover:underline"
                 >
-                  Career Expo Website
+                  🌐 Career Expo Website
                 </a>
                 <a
                   href="https://dpka.ub.ac.id/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-yellow-400 hover:underline"
+                  class="hover:underline"
                 >
-                  DPKA Website
+                  🌐 DPKA Website
                 </a>
               </div>
             </div>
@@ -315,7 +318,7 @@
               <img
                 src="assets/qrcodeBCE.png"
                 alt="QRCode Image"
-                class="w-40 h-w-40 md:mr-16"
+                class="w-40 h-w-40 md:mr-16 transform hover:scale-105 transition duration-500 ease-in-out"
               />
             </div>
           </div>
@@ -323,7 +326,408 @@
           <div class="mt-6">
             <button
               id="registerButton"
-              class="w-full bg-green-500 text-white p-3 rounded-lg font-bold hover:bg-green-900 active:bg-green-900 focus:outline-none focus:ring focus:ring-green-500"
+              class="w-full bg-green-500 text-white p-3 rounded-lg font-bold hover:bg-green-900 active:bg-green-900 focus:outline-none focus:ring focus:ring-green-500 transform hover:scale-105 transition duration-500 ease-in-out"
+              onclick="registerUser()"
+            >
+              ❗Register Yourself Now❗
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <!-- Main Content Section -->
+    <main class="py-5 px-10 drop-shadow-lg relative z-10">
+      <!-- Event Card Container -->
+      <div class="container mx-auto rounded-lg">
+        <!-- Event Card -->
+        <div
+          class="bg-white relative p-4 rounded-lg drop-shadow-lg my-4 flex flex-wrap items-center"
+        >
+          <div class="w-full md:max-w-80 md:pr-4 md:mb-4 lg:mb-0 lg:ml-5">
+            <img
+              src="assets/CFposter.jpg"
+              alt="Event Image"
+              class="w-full h-auto rounded-lg object-cover object-center"
+            />
+          </div>
+          <div class="p-2 flex-grow">
+            <span
+              class="bg-blue-200 text-blue-800 text-xs md:text-sm px-2 py-1 inline-block rounded-lg mt-2"
+              >Free Event</span
+            >
+            <!-- Save the Event -->
+            <div
+              class="absolute bottom-48 right-5 flex items-center md:bottom-72 md:right-10"
+            >
+              <img
+                src="assets/save.png"
+                alt="Bookmark Icon"
+                id="save2"
+                class="h-6 w-6 cursor-pointer ml-2 hover:bg-gray-300 active:bg-gray-500 focus:outline-none focus:ring focus:ring-gray-900 transform hover:scale-125 transition duration-500 ease-in-out"
+                onclick="saveEvent('eventSavedPopup2')"
+              />
+            </div>
+            <div
+              id="eventSavedPopup2"
+              class="hidden absolute bottom-48 right-12 bg-white p-2 rounded-lg drop-shadow-lg text-xs md:bottom-72 md:right-20"
+            >
+              Event saved!
+            </div>
+            <p class="text-green-500 text-xs md:text-sm my-2">
+              Organized by
+              <span class="font-bold">BEM FILKOM UB</span>
+            </p>
+            <h2 class="font-bold text-lg md:text-2xl">
+              CAREER FAIR x ALTERRA ACADEMY
+            </h2>
+            <p class="text-gray-600 md:text-lg">
+              🗓️ 17 September 2023<br />
+              📌 Talkshow, Seminar, and Knowledge Sharing
+            </p>
+          </div>
+          <button
+            class="bg-blue-500 text-white px-4 py-2 mt-4 rounded-lg hover:bg-blue-900 active:bg-blue-900 focus:outline-none focus:ring focus:ring-blue-500 md:mr-5 transform hover:scale-105 transition duration-500 ease-in-out"
+            onclick="openModal('modal 2')"
+          >
+            View Details
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- CARD 2 -->
+    <!-- Modal Section -->
+    <div
+      id="modal 2"
+      class="hidden fixed inset-0 bg-black bg-opacity-70 overflow-y-auto h-full w-full flex items-center justify-center z-50"
+      onclick="closeModal(event, 'modal 2')"
+    >
+      <div
+        class="container mx-auto p-4 max-w-2xl bg-white rounded-lg drop-shadow-lg z-50 overflow-y-auto"
+        style="
+          margin-top: 55vh;
+          margin-bottom: 10vh;
+          margin-left: 5vh;
+          margin-right: 5vh;
+        "
+      >
+        <!-- Modal Header -->
+        <div
+          class="flex justify-between items-center py-4 px-6 bg-gray-200 rounded-lg"
+        >
+          <h2 class="text-xl font-semibold text-gray-700">Event Details</h2>
+          <button
+            class="text-gray-700 font-semibold"
+            onclick="closeModal(event, 'modal 2')"
+          >
+            ✖️
+          </button>
+        </div>
+        <!-- Modal Body -->
+        <div class="p-6">
+          <!-- Event Header -->
+          <div class="flex items-center justify-between">
+            <h3 class="text-2xl font-bold">CAREER FAIR x ALTERRA ACADEMY</h3>
+            <span class="text-lg font-bold text-green-500 ml-4">Free</span>
+          </div>
+          <!-- Event Content -->
+          <div class="flex gap-4 my-6">
+            <img
+              src="assets/CFposter.jpg"
+              alt="Event Image"
+              class="w-1/2 rounded-lg object-cover object-center"
+            />
+            <div>
+              <div class="my-2 flex items-center mb-4">
+                <div
+                  class="bg-white p-2 rounded-lg drop-shadow-lg flex items-center"
+                >
+                  <img
+                    src="assets/BEMFILKOMlogo.png"
+                    alt="Company Logo"
+                    class="h-6"
+                  />
+                  <span class="ml-3 text-xs text-gray-500">BEM FILKOM UB</span>
+                </div>
+              </div>
+              <p class="text-sm text-gray-500 mb-4">
+                <span class="font-bold">🗓️ Day, date:</span><br />
+                Sunday, 17 September 2023<br />
+                <span class="font-bold">🕒 Time:</span><br />
+                09.00 - 14.00 WIB<br />
+                <span class="font-bold">📌 Location:</span><br />
+                Auditorium Algoritma FILKOM UB
+              </p>
+              <div class="bg-blue-200 p-2 rounded-lg">
+                <p class="text-sm text-blue-800">
+                  <i class="font-bold">What's Exciting:</i>
+                </p>
+                <ul class="text-sm">
+                  <li>Knowledge Sharing</li>
+                  <li>Seminar</li>
+                  <li>Talkshow</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- More Info and Scan Me -->
+          <div class="flex justify-between mt-4">
+            <!-- Left side: More Information -->
+            <div class="flex flex-col">
+              <div
+                class="px-4 py-2 bg-gray-300 rounded-lg font-semibold mb-4 text-md"
+              >
+                More Information
+              </div>
+              <!-- Social Media Links -->
+              <div class="flex flex-col space-y-2 text-sm">
+                <a
+                  href="https://www.instagram.com/careerfair.filkom/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:underline"
+                >
+                  🎴 Instagram
+                </a>
+                <a
+                  href="https://twitter.com/bemfilkomub/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:underline"
+                >
+                  🃏 Twitter BEM FILKOM UB
+                </a>
+                <a
+                  href="https://bemfilkom.ub.ac.id/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:underline"
+                >
+                  🌐 Website BEM FILKOM UB
+                </a>
+              </div>
+            </div>
+            <!-- Right side: Scan Me and QRCode Image -->
+            <div class="flex flex-col items-center">
+              <div
+                class="px-4 py-2 bg-gray-300 rounded-lg font-semibold md:mr-16"
+              >
+                Scan Me!
+              </div>
+              <img
+                src="assets/CFqrcode.png"
+                alt="QRCode Image"
+                class="w-40 h-w-40 md:mr-16 transform hover:scale-105 transition duration-500 ease-in-out"
+              />
+            </div>
+          </div>
+          <!-- Action Button -->
+          <div class="mt-6">
+            <button
+              id="registerButton"
+              class="w-full bg-green-500 text-white p-3 rounded-lg font-bold hover:bg-green-900 active:bg-green-900 focus:outline-none focus:ring focus:ring-green-500 transform hover:scale-105 transition duration-500 ease-in-out"
+              onclick="registerUser()"
+            >
+              ❗Register Yourself Now❗
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <!-- Main Content Section -->
+    <main class="py-5 px-10 drop-shadow-lg relative z-10">
+      <!-- Event Card Container -->
+      <div class="container mx-auto rounded-lg">
+        <!-- Event Card -->
+        <div
+          class="bg-white relative p-4 rounded-lg drop-shadow-lg my-4 flex flex-wrap items-center"
+        >
+          <div class="w-full md:max-w-80 md:pr-4 md:mb-4 lg:mb-0 lg:ml-5">
+            <img
+              src="assets/JMFposter.jpg"
+              alt="Event Image"
+              class="w-full h-auto rounded-lg object-cover object-center"
+            />
+          </div>
+          <div class="p-2 flex-grow">
+            <span
+              class="bg-blue-200 text-blue-800 text-xs md:text-sm px-2 py-1 inline-block rounded-lg mt-2"
+              >Free Event</span
+            >
+            <!-- Save the Event -->
+            <div
+              class="absolute bottom-48 right-5 flex items-center md:bottom-72 md:right-10"
+            >
+              <img
+                src="assets/save.png"
+                alt="Bookmark Icon"
+                id="save3"
+                class="h-6 w-6 cursor-pointer ml-2 hover:bg-gray-300 active:bg-gray-500 focus:outline-none focus:ring focus:ring-gray-900 transform hover:scale-125 transition duration-500 ease-in-out"
+                onclick="saveEvent('eventSavedPopup3')"
+              />
+            </div>
+            <div
+              id="eventSavedPopup3"
+              class="hidden absolute bottom-48 right-12 bg-white p-2 rounded-lg drop-shadow-lg text-xs md:bottom-72 md:right-20"
+            >
+              Event saved!
+            </div>
+            <p class="text-green-500 text-xs md:text-sm my-2">
+              Organized by
+              <span class="font-bold">UPT BLK Singosari</span>
+            </p>
+            <h2 class="font-bold text-lg md:text-2xl">JOB MARKET FAIR 2023</h2>
+            <p class="text-gray-600 md:text-lg">
+              🗓️ 28 November 2023<br />
+              📌 Job Vacancies and Internship Vacancies
+            </p>
+          </div>
+          <button
+            class="bg-blue-500 text-white px-4 py-2 mt-4 rounded-lg hover:bg-blue-900 active:bg-blue-900 focus:outline-none focus:ring focus:ring-blue-500 md:mr-5 transform hover:scale-105 transition duration-500 ease-in-out"
+            onclick="openModal('modal 3')"
+          >
+            View Details
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- CARD 3 -->
+    <!-- Modal Section -->
+    <div
+      id="modal 3"
+      class="hidden fixed inset-0 bg-black bg-opacity-70 overflow-y-auto h-full w-full flex items-center justify-center z-50"
+      onclick="closeModal(event, 'modal 3')"
+    >
+      <div
+        class="container mx-auto p-4 max-w-2xl bg-white rounded-lg drop-shadow-lg z-50 overflow-y-auto"
+        style="
+          margin-top: 55vh;
+          margin-bottom: 10vh;
+          margin-left: 5vh;
+          margin-right: 5vh;
+        "
+      >
+        <!-- Modal Header -->
+        <div
+          class="flex justify-between items-center py-4 px-6 bg-gray-200 rounded-lg"
+        >
+          <h2 class="text-xl font-semibold text-gray-700">Event Details</h2>
+          <button
+            class="text-gray-700 font-semibold"
+            onclick="closeModal(event, 'modal 3')"
+          >
+            ✖️
+          </button>
+        </div>
+        <!-- Modal Body -->
+        <div class="p-6">
+          <!-- Event Header -->
+          <div class="flex items-center justify-between">
+            <h3 class="text-2xl font-bold">JOB MARKET FAIR 2023</h3>
+            <span class="text-lg font-bold text-green-500 ml-4">Free</span>
+          </div>
+          <!-- Event Content -->
+          <div class="flex gap-4 my-6">
+            <img
+              src="assets/JMFposter.jpg"
+              alt="Event Image"
+              class="w-1/2 rounded-lg object-cover object-center"
+            />
+            <div>
+              <div class="my-2 flex items-center mb-4">
+                <div
+                  class="bg-white p-2 rounded-lg drop-shadow-lg flex items-center"
+                >
+                  <img
+                    src="assets/JMFlogo.png"
+                    alt="Company Logo"
+                    class="h-6"
+                  />
+                  <span class="ml-3 text-xs text-gray-500"
+                    >UPT BLK Singosari</span
+                  >
+                </div>
+              </div>
+              <p class="text-sm text-gray-500 mb-4">
+                <span class="font-bold">🗓️ Day, date:</span><br />
+                Tuesday, 28 November 2023<br />
+                <span class="font-bold">🕒 Time:</span><br />
+                09.00 - 15.00 WIB<br />
+                <span class="font-bold">📌 Location:</span><br />
+                UPT BLK Singosari Office Yard
+              </p>
+              <div class="bg-blue-200 p-2 rounded-lg">
+                <p class="text-sm text-blue-800">
+                  <i class="font-bold">What's Exciting:</i>
+                </p>
+                <ul class="text-sm">
+                  <li>Job Vacancies</li>
+                  <li>Internship Vacancies</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- More Info and Scan Me -->
+          <div class="flex justify-between mt-4">
+            <!-- Left side: More Information -->
+            <div class="flex flex-col">
+              <div
+                class="px-4 py-2 bg-gray-300 rounded-lg font-semibold mb-4 text-md"
+              >
+                More Information
+              </div>
+              <!-- Social Media Links -->
+              <div class="flex flex-col space-y-2 text-sm">
+                <a
+                  href="https://www.instagram.com/blk_singosari/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:underline"
+                >
+                  🎴 Instagram
+                </a>
+                <a
+                  href="https://kelembagaan.kemnaker.go.id/home/companies/ad50f3a2-d893-4b74-90dc-6449feda1690/profiles"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:underline"
+                >
+                  🌐 Website Kemnaker
+                </a>
+                <a
+                  href="https://disnakertrans.jatimprov.go.id/page/upt-blk-singosari-64ae5d3b95fff"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:underline"
+                >
+                  🌐 Website Disnakertrans Jatim
+                </a>
+              </div>
+            </div>
+            <!-- Right side: Scan Me and QRCode Image -->
+            <div class="flex flex-col items-center">
+              <div
+                class="px-4 py-2 bg-gray-300 rounded-lg font-semibold md:mr-16"
+              >
+                Scan Me!
+              </div>
+              <img
+                src="assets/JMFqrcode.png"
+                alt="QRCode Image"
+                class="w-40 h-w-40 md:mr-16 transform hover:scale-105 transition duration-500 ease-in-out"
+              />
+            </div>
+          </div>
+          <!-- Action Button -->
+          <div class="mt-6">
+            <button
+              id="registerButton"
+              class="w-full bg-green-500 text-white p-3 rounded-lg font-bold hover:bg-green-900 active:bg-green-900 focus:outline-none focus:ring focus:ring-green-500 transform hover:scale-105 transition duration-500 ease-in-out"
               onclick="registerUser()"
             >
               ❗Register Yourself Now❗
@@ -344,7 +748,7 @@
         <div
           class="animate-spin w-12 h-12 border-t-4 border-green-500 rounded-full"
         ></div>
-        <p class="text-center text-lg font-semibold">
+        <p class="text-center text-lg md:text-2xl font-semibold">
           Registration is in process...
         </p>
       </div>
@@ -356,9 +760,9 @@
       class="hidden fixed inset-0 bg-black bg-opacity-70 overflow-y-auto h-full w-full flex items-center justify-center z-50"
     >
       <div class="bg-white p-4 rounded-lg shadow-lg">
-        <p class="text-center text-lg md:text-xl font-semibold">
+        <p class="text-center text-lg md:text-2xl font-semibold">
           🎉 Registration is successful 🎉<br />
-          <span class="text-sm font-normal"
+          <span class="text-sm md:text-base font-normal"
             >Your registration for the event you want to join was
             successful.</span
           >
@@ -396,31 +800,31 @@
             <img
               src="assets/star.png"
               alt="Star"
-              class="w-14 h-w-14 cursor-pointer"
+              class="w-12 h-12 md:w-16 md:h-16 cursor-pointer transform hover:scale-125 transition duration-500 ease-in-out"
               onclick="rate(1)"
             />
             <img
               src="assets/star.png"
               alt="Star"
-              class="w-14 h-w-14 cursor-pointer"
+              class="w-12 h-12 md:w-16 md:h-16 cursor-pointer transform hover:scale-125 transition duration-500 ease-in-out"
               onclick="rate(2)"
             />
             <img
               src="assets/star.png"
               alt="Star"
-              class="w-14 h-w-14 cursor-pointer"
+              class="w-12 h-12 md:w-16 md:h-16 cursor-pointer transform hover:scale-125 transition duration-500 ease-in-out"
               onclick="rate(3)"
             />
             <img
               src="assets/star.png"
               alt="Star"
-              class="w-14 h-w-14 cursor-pointer"
+              class="w-12 h-12 md:w-16 md:h-16 cursor-pointer transform hover:scale-125 transition duration-500 ease-in-out"
               onclick="rate(4)"
             />
             <img
               src="assets/star.png"
               alt="Star"
-              class="w-14 h-w-14 cursor-pointer"
+              class="w-12 h-12 md:w-16 md:h-16 cursor-pointer transform hover:scale-125 transition duration-500 ease-in-out"
               onclick="rate(5)"
             />
           </div>
@@ -460,9 +864,9 @@
       class="hidden fixed inset-0 bg-black bg-opacity-70 overflow-y-auto h-full w-full flex items-center justify-center z-50"
     >
       <div class="bg-white p-4 rounded-lg shadow-lg">
-        <p class="text-center text-lg md:text-xl font-semibold">
+        <p class="text-center text-lg md:text-2xl font-semibold">
           ✨ Thank You ✨<br />
-          <span class="text-sm font-normal"
+          <span class="text-sm md:text-base font-normal"
             >Your rating and feedback have been noted.</span
           >
         </p>
@@ -483,13 +887,13 @@
     >
       <div class="p-4 md:ml-10">
         <div class="menu-image"></div>
-        <strong><p>Contact Info</p></strong>
-        <p>Contact Details</p>
+        <strong><p>📞 Contact Person</p></strong>
+        <p>+62 85736498376</p>
       </div>
       <div class="p-4 md:ml-10">
         <div class="menu-image"></div>
-        <strong><p>Contact Info</p></strong>
-        <p>Contact Details</p>
+        <strong><p>✉️ Email Address</p></strong>
+        <p>sleeveup@gmail.com</p>
       </div>
     </div>
 
@@ -507,28 +911,29 @@
 
     <script>
       // Function to open modal
-      function openModal() {
-        document.getElementById("modal").classList.remove("hidden");
+      function openModal(modalId) {
+        document.getElementById(modalId).classList.remove("hidden");
       }
 
       // Function to close modal
-      function closeModal(event) {
+      function closeModal(event, modalId) {
         if (event) {
           const modalContent = document.querySelector(".container");
           if (modalContent && !modalContent.contains(event.target)) {
-            document.getElementById("modal").classList.add("hidden");
+            document.getElementById(modalId).classList.add("hidden");
           }
         } else {
-          document.getElementById("modal").classList.add("hidden");
+          document.getElementById(modalId).classList.add("hidden");
         }
       }
 
       // Function to save event
-      function saveEvent() {
-        document.getElementById("eventSavedPopup").classList.remove("hidden");
+      function saveEvent(popupId) {
+        const eventSavedPopup = document.getElementById(popupId);
+        eventSavedPopup.classList.remove("hidden");
         setTimeout(() => {
-          document.getElementById("eventSavedPopup").classList.add("hidden");
-        }, 2000); // Sembunyikan pop-up setelah 2 detik
+          eventSavedPopup.classList.add("hidden");
+        }, 2000); // Hide the popup after 2 seconds
       }
 
       // Function to register
@@ -568,7 +973,6 @@
       // Function to handle star rating
       function rate(stars) {
         console.log(`User rated with ${stars} stars`);
-
         // Update the displayed rating score
         document.getElementById("ratingScore").innerText = stars;
       }
@@ -580,15 +984,10 @@
         document.getElementById("submitFeedback").classList.remove("hidden");
         setTimeout(() => {
           document.getElementById("submitFeedback").classList.add("hidden");
-        }, 3000); // Sembunyikan pop-up setelah 3 detik
+        }, 3000); // Hide the popup after 3 seconds
 
         // Close the rating and feedback popup
         closeRatingFeedbackPopup();
-      }
-
-      // Function to open rating and feedback popup from other pages
-      function openFeedbackFromOtherPage() {
-        openRatingFeedbackPopup();
       }
 
       // Make blur effect on navbar
