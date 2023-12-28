@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+nav,
+footer {
+  display: flex;
+  padding: 1% 4%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul li,
+.container-list-left,
+.container-list-right {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+  cursor: pointer;
+}
+
+nav ul li::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  background: #204ecf;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+nav ul li:hover::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background: #204ecf;
+  display: block;
+  margin: auto;
+}
+
+.nav-list-left {
+  flex: 1;
+  text-align: left;
+}
+
+.nav-list-right {
+  flex: 1;
+  text-align: right;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.data-card, .cv-card {
+    transition: background-color 0.2s;
+}
+
+.data-card:hover {
+    background-color: #00ec83;
+    /* color: white; */
+}
+
+.cv-card:hover {
+    background-color: #204ecf;
+    color: white;
+}
+
+.hero-container{
+    display: flex;
+    flex-direction: column;
+    padding: 3% 5%;
+    width: 1;
+    height: 50vh;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)), url('image/hero-image.jpg');
+    background-size: cover;
+    color: white;
+}

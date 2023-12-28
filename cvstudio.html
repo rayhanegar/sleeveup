@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            SleeveUp - CV Studio
+        </title>
+        <link href="cvstudio-style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <script src="navigation.js"></script>
+        <style>
+            body {
+                font-family: 'Plus Jakarta Sans', sans;
+            }
+        </style>
+        <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-b from-white via-white via-70% to-slate-300">
+    <header>
+        <nav>
+            <ul class="nav-list-left">
+              <li>
+                <h1 class="sleeve-up-nav text-2xl font-bold" id="sleeveUpNav">
+                  <a href="./homepage.html">SleeveUp!</a>
+                </h1>
+              </li>
+              <li><a href="./chatbotpage.html">Chatbot</a></li>
+              <li><a href="./feedbackpage.html">Feedback</a></li>
+            </ul>
+            <ul class="nav-list-right">
+              <li><a href="./signup.html">Register</a></li>
+              <li><a href="./signup.html">Sign-in</a></li>
+            </ul>
+          </nav>
+    </header>
+    <div class="hero-container">
+        <h1 class="text-4xl font-bold">CV Studio</h1>
+        <p>Validate, generate and style your CV in one place.</p>
+    </div>
+    <div class="py-4 px-10 flex min-h-screen min-w-full">
+        <div class="flex flex-col gap-4 w-1/3 mx-4 px-4 py-4 rounded-md border-black border bg-white/40">
+            <h1 class="text-3xl font-bold">Data Validation<span class="font-bold text-4xl text-[#204ecf]">.</span></h1>
+            <p>Generate your curriculum vitae in no hassle, obtained from your profile information.</p>
+            <div class="flex flex-col gap-4">
+                <a href='profile.html' class="data-card container mx-auto flex items-center justify-between rounded-md border-black border px-4 py-4">
+                    <h3 class="font-bold">Education history</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>  
+                </a>
+                <a href='profile.html' class="data-card container mx-auto flex items-center justify-between rounded-md border-black border px-4 py-4">
+                    <h3 class="font-bold">Experiences</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                </a>
+                <a href='profile.html' class="data-card container mx-auto flex items-center justify-between rounded-md border-black border px-4 py-4">
+                    <h3 class="font-bold">Skills</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                </a>
+                <a href='profile.html' class="data-card container mx-auto flex items-center justify-between rounded-md border-black border px-4 py-4">
+                    <h3 class="font-bold">Contact</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="flex flex-col gap-4 w-2/3 mx-4 px-4 py-4 rounded-md border-black border bg-white/40">
+            <h1 class="text-3xl font-bold">Your Generated CV <span class="font-bold text-4xl text-[#204ecf]">.</span></h1>
+            <p>Your recently generated CV. Click for more detail or add new.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 ">
+                <div class="cv-card container h-80 mx-auto flex flex-col px-4 py-4 gap-4 rounded-md border border-black">
+                    <div class="h-1/2 bg-cover bg-center rounded-md" style="background-image: url('./image/cv-template.png')"></div>
+                    <h3 class="text-xl font-bold">Emirates Open Day</h3>
+                    <p>Created for Emirates Open Day 2023, submission due Jan 2024</p>
+                </div>
+                <div class="cv-card container h-80 mx-auto flex flex-col px-4 py-4 gap-4 rounded-md border border-black">
+                    <div class="h-1/2 bg-cover bg-center rounded-md" style="background-image: url('./image/cv-template.png')"></div>
+                    <h3 class="text-xl font-bold">Career Fair FILKOM</h3>
+                    <p>Created for Open Recruitment Career Fair FILKOM core team.</p>
+                </div>
+                <div class="cv-card container h-80 mx-auto flex flex-col items-center justify-center px-4 py-4 gap-4 rounded-md border  border-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                    </svg>  
+                    <p class="text-xl font-light">Add new</p>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
