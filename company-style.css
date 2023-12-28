@@ -3,12 +3,14 @@
     padding:0; 
     font-family: 'Plus Jakarta Sans', sans-serif;
  }
- nav, footer{
+
+nav, footer{
     display: flex;
     padding: 1% 4%;
     justify-content: space-between;
     align-items: center;
 }
+
 nav ul li, .container-list-left, .container-list-right{
     list-style: none;
     display: inline-block;
@@ -16,6 +18,7 @@ nav ul li, .container-list-left, .container-list-right{
     position: relative;
     cursor: pointer;
 }
+
 nav ul li::after{
     content: '';
     width: 0%;
@@ -25,6 +28,7 @@ nav ul li::after{
     margin: auto;
     transition: .5s;
 }
+
 nav ul li:hover::after{
     content: '';
     width: 100%;
@@ -33,14 +37,17 @@ nav ul li:hover::after{
     display: block;
     margin: auto;
 }
+
 .nav-list-left{
     flex: 1;
     text-align: left;
 }
+
 .nav-list-right{
     flex: 1;
     text-align: right;
 }
+
 .company-container{
     display: flex;
     flex-direction: column;

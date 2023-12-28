@@ -12,5 +12,12 @@ document.addEventListener("DOMContentLoaded", function() {
         } catch (error) {
             console.error("Error opening homepage.html:", error);
         }
-    })
+    });
+    document.getElementById("perusahaanBtn").addEventListener("click", function() {
+        try {
+            window.location.href = "company.html"
+        } catch (error) {
+            console.error("Error opening company.html:", error)
+        }
+    });
 });
