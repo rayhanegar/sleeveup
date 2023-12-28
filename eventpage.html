@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SleeveUp - Events</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar Section -->
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-sm bg-opacity-70 bg-white"
+    >
+      <div class="flex justify-between items-center py-6 px-4 md:mx-14">
+        <ul class="flex items-center space-x-4 md:space-x-6">
+          <li>
+            <h1
+              class="text-xl font-bold text-black md:text-2xl cursor-pointer relative group"
+            >
+              <a href="./homepage.html">SleeveUp!</a>
+              <span
+                class="absolute inset-x-0 bottom-0 h-1 bg-blue-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom duration-500"
+              ></span>
+            </h1>
+          </li>
+          <li class="cursor-pointer relative group">
+            <a href="./chatbotpage.html">Chatbot</a>
+            <span
+              class="absolute inset-x-0 bottom-0 h-1 bg-blue-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom duration-500"
+            ></span>
+          </li>
+          <li class="cursor-pointer relative group">
+            <a href="./feedbackpage.html">Feedback</a>
+            <span
+              class="absolute inset-x-0 bottom-0 h-1 bg-blue-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom duration-500"
+            ></span>
+          </li>
+        </ul>
+        <ul class="flex items-center space-x-4 md:space-x-6">
+          <li class="cursor-pointer relative group">
+            <a href="./signup.html">Register</a>
+            <span
+              class="absolute inset-x-0 bottom-0 h-1 bg-blue-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom duration-500"
+            ></span>
+          </li>
+          <li class="cursor-pointer relative group">
+            <a href="./signup.html">Sign-in</a>
+            <span
+              class="absolute inset-x-0 bottom-0 h-1 bg-blue-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom duration-500"
+            ></span>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Container Section -->
+    <section id="hero-container">
+      <div
+        class="bg-cover text-white text-center pb-36 pt-52 bg-no-repeat bg-center"
+        style="
+          background-image: linear-gradient(
+              to bottom,
+              rgba(0, 0, 0, 0),
+              rgba(0, 0, 0, 1)
+            ),
+            url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        "
+      >
+        <h1 class="text-3xl md:text-5xl mb-3 font-bold drop-shadow-lg">
+          Find the One You Want.
+        </h1>
+        <p class="px-10 drop-shadow-lg text-lg md:text-xl">
+          <i
+            >Find the Best Events, Workshops, and Job Training for Your Career
+            Development.</i
+          >
+        </p>
+
+        <!-- Search Bar -->
+        <div class="my-8 md:w-full">
+          <div class="flex items-center justify-center">
+            <div
+              class="flex items-center space-x-2 p-1 rounded-full bg-white drop-shadow-lg w-full max-w-xs md:max-w-lg mx-auto"
+            >
+              <img
+                class="w-5 h-5 ml-2"
+                src="assets/search.png"
+                alt="Icon Search"
+              />
+              <input
+                type="text"
+                class="placeholder:italic placeholder:text-sm placeholder:text-slate-400 flex-grow border-none focus:outline-none bg-transparent text-black text-xs md:text-md"
+                placeholder="Search for anything..."
+                name="search"
+              />
+              <button
+                class="bg-green-500 text-white py-1 px-2 rounded-full hover:bg-green-900 active:bg-green-900 focus:outline-none focus:ring focus:ring-green-500 drop-shadow-lg"
+              >
+                <h3>Search</h3>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARD 1 -->
+    <!-- Main Content Section -->
+    <main class="py-5 px-10 drop-shadow-lg relative z-10">
+      <!-- Event Card Container -->
+      <div class="container mx-auto rounded-lg">
+        <!-- Event Card -->
+        <div
+          class="bg-white relative p-4 rounded-lg drop-shadow-lg my-4 flex flex-wrap items-center"
+        >
+          <div class="w-full md:max-w-80 md:pr-4 md:mb-4 lg:mb-0 lg:ml-5">
+            <img
+              src="assets/BCEposter.png"
+              alt="Event Image"
+              class="w-full h-auto rounded-lg object-cover object-center"
+            />
+          </div>
+          <div class="p-2 flex-grow">
+            <span
+              class="bg-blue-200 text-blue-800 text-xs md:text-sm px-2 py-1 inline-block rounded-lg mt-2"
+              >Free Event</span
+            >
+            <!-- Save the Event -->
+            <div
+              class="absolute bottom-60 right-5 flex items-center md:bottom-72 md:right-10"
+            >
+              <img
+                src="assets/save.png"
+                alt="Bookmark Icon"
+                id="save1"
+                class="h-6 w-6 cursor-pointer ml-2 hover:bg-gray-300 active:bg-gray-500 focus:outline-none focus:ring focus:ring-gray-900 transform hover:scale-125 transition duration-500 ease-in-out"
+                onclick="saveEvent('eventSavedPopup1')"
+              />
+            </div>
+            <div
+              id="eventSavedPopup1"
+              class="hidden absolute bottom-60 right-12 bg-white p-2 rounded-lg drop-shadow-lg text-xs md:bottom-72 md:right-20"
+            >
+              Event saved!
+            </div>
+            <p class="text-green-500 text-xs md:text-sm my-2">
+              Organized by
+              <span class="font-bold">DPKA University of Brawijaya</span>
+            </p>
+            <h2 class="font-bold text-lg md:text-2xl">
+              BRAWIJAYA CAREER EXPO x MALANG RAYA 2023
+            </h2>
+            <p class="text-gray-600 md:text-lg">
+              🗓️ 25 - 29 December 2023 <br />
+              📌 Recruitment, Internships, Scholarships, and Knowledge Sharing
+            </p>
+          </div>
+          <button
+            class="bg-blue-500 text-white px-4 py-2 mt-4 rounded-lg hover:bg-blue-900 active:bg-blue-900 focus:outline-none focus:ring focus:ring-blue-500 md:mr-5 transform hover:scale-105 transition duration-500 ease-in-out"
+            onclick="openModal('modal 1')"
+          >
+            View Details
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- CARD 1 -->
+    <!-- Modal Section -->
+    <div
+      id="modal 1"
+      class="hidden fixed inset-0 bg-black bg-opacity-70 overflow-y-auto h-full w-full flex items-center justify-center z-50"
+      onclick="closeModal(event, 'modal 1')"
+    >
+      <div
+        class="container mx-auto p-4 max-w-2xl bg-white rounded-lg drop-shadow-lg z-50 overflow-y-auto"
+        style="
+          margin-top: 55vh;
+          margin-bottom: 10vh;
+          margin-left: 5vh;
+          margin-right: 5vh;
+        "
+      >
+        <!-- Modal Header -->
+        <div
+          class="flex justify-between items-center py-4 px-6 bg-gray-200 rounded-lg"
+        >
+          <h2 class="text-xl font-semibold text-gray-700">Event Details</h2>
+          <button
+            class="text-gray-700 font-semibold"
+            onclick="closeModal(event, 'modal 1')"
+          >
+            ✖️
+          </button>
+        </div>
+        <!-- Modal Body -->
+        <div class="p-6">
+          <!-- Event Header -->
+          <div class="flex items-center justify-between">
+            <h3 class="text-2xl font-bold">
+              BRAWIJAYA CAREER EXPO x MALANG RAYA 2023
+            </h3>
+            <span class="text-lg font-bold text-green-500 ml-4">Free</span>
+          </div>
+          <!-- Event Content -->
+          <div class="flex gap-4 my-6">
+            <img
+              src="assets/BCEposter.png"
+              alt="Event Image"
+              class="w-1/2 rounded-lg object-cover object-center"
+            />
+            <div>
+              <div class="my-2 flex items-center mb-4">
+                <div
+                  class="bg-white p-2 rounded-lg drop-shadow-lg flex items-center"
+                >
+                  <img src="assets/dpkaUB.png" alt="Company Logo" class="h-6" />
+                  <span class="ml-3 text-xs text-gray-500"
+                    >DPKA University of Brawijaya</span
+                  >
+                </div>
+              </div>
+              <p class="text-sm text-gray-500 mb-4">
+                <span class="font-bold">🗓️ Day, date:</span><br />
+                Monday - Friday, 25 - 29 December 2023<br />
+                <span class="font-bold">🕒 Time:</span><br />
+                09.00 - 16.00 WIB<br />
+                <span class="font-bold">📌 Location:</span><br />
+                Samantha Krida Building, University of Brawijaya
+              </p>
+              <div class="bg-blue-200 p-2 rounded-lg">
+                <p class="text-sm text-blue-800">
+                  <i class="font-bold">What's Exciting:</i>
+                </p>
+                <ul class="text-sm">
+                  <li>Job Recruitment</li>
+                  <li>Internship Vacancies</li>
+                  <li>Scholarships</li>
+                  <li>Knowledge Sharing</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- More Info and Scan Me -->
+          <div class="flex justify-between mt-4">
+            <!-- Left side: More Information -->
+            <div class="flex flex-col">
+              <div
+                class="px-4 py-2 bg-gray-300 rounded-lg font-semibold mb-4 text-md"
+              >
+                More Information
+              </div>
+              <!-- Social Media Links -->
+              <div class="flex flex-col space-y-2 text-sm">
+                <a
+                  href="https://www.instagram.com/karir.ub/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:underline"
+                >
+                  🎴 Instagram
+                </a>
+                <a
+                  href="https://twitter.com/karir_ub"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:underline"
+                >
+                  🃏 Twitter
+                </a>
+                <a
+                  href="https://web.facebook.com/karir.ub.official"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:underline"
+                >
+                  🀄 Facebook
+                </a>
+                <a
+                  href="https://careerexpo.ub.ac.id/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:underline"
+                >
+                  🌐 Career Expo Website
+                </a>
+                <a
+                  href="https://dpka.ub.ac.id/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:underline"
+                >
+                  🌐 DPKA Website
+                </a>
+              </div>
+            </div>
+            <!-- Right side: Scan Me and QRCode Image -->
+            <div class="flex flex-col items-center">
+              <div
+                class="px-4 py-2 bg-gray-300 rounded-lg font-semibold md:mr-16"
+              >
+                Scan Me!
+              </div>
+              <img
+                src="assets/qrcodeBCE.png"
+                alt="QRCode Image"
+                class="w-40 h-w-40 md:mr-16 transform hover:scale-105 transition duration-500 ease-in-out"
+              />
+            </div>
+          </div>
+          <!-- Action Button -->
+          <div class="mt-6">
+            <button
+              id="registerButton"
+              class="w-full bg-green-500 text-white p-3 rounded-lg font-bold hover:bg-green-900 active:bg-green-900 focus:outline-none focus:ring focus:ring-green-500 transform hover:scale-105 transition duration-500 ease-in-out"
+              onclick="registerUser()"
+            >
+              ❗Register Yourself Now❗
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <!-- Main Content Section -->
+    <main class="py-5 px-10 drop-shadow-lg relative z-10">
+      <!-- Event Card Container -->
+      <div class="container mx-auto rounded-lg">
+        <!-- Event Card -->
+        <div
+          class="bg-white relative p-4 rounded-lg drop-shadow-lg my-4 flex flex-wrap items-center"
+        >
+          <div class="w-full md:max-w-80 md:pr-4 md:mb-4 lg:mb-0 lg:ml-5">
+            <img
+              src="assets/CFposter.jpg"
+              alt="Event Image"
+              class="w-full h-auto rounded-lg object-cover object-center"
+            />
+          </div>
+          <div class="p-2 flex-grow">
+            <span
+              class="bg-blue-200 text-blue-800 text-xs md:text-sm px-2 py-1 inline-block rounded-lg mt-2"
+              >Free Event</span
+            >
+            <!-- Save the Event -->
+            <div
+              class="absolute bottom-48 right-5 flex items-center md:bottom-72 md:right-10"
+            >
+              <img
+                src="assets/save.png"
+                alt="Bookmark Icon"
+                id="save2"
+                class="h-6 w-6 cursor-pointer ml-2 hover:bg-gray-300 active:bg-gray-500 focus:outline-none focus:ring focus:ring-gray-900 transform hover:scale-125 transition duration-500 ease-in-out"
+                onclick="saveEvent('eventSavedPopup2')"
+              />
+            </div>
+            <div
+              id="eventSavedPopup2"
+              class="hidden absolute bottom-48 right-12 bg-white p-2 rounded-lg drop-shadow-lg text-xs md:bottom-72 md:right-20"
+            >
+              Event saved!
+            </div>
+            <p class="text-green-500 text-xs md:text-sm my-2">
+              Organized by
+              <span class="font-bold">BEM FILKOM UB</span>
+            </p>
+            <h2 class="font-bold text-lg md:text-2xl">
+              CAREER FAIR x ALTERRA ACADEMY
+            </h2>
+            <p class="text-gray-600 md:text-lg">
+              🗓️ 17 September 2023<br />
+              📌 Talkshow, Seminar, and Knowledge Sharing
+            </p>
+          </div>
+          <button
+            class="bg-blue-500 text-white px-4 py-2 mt-4 rounded-lg hover:bg-blue-900 active:bg-blue-900 focus:outline-none focus:ring focus:ring-blue-500 md:mr-5 transform hover:scale-105 transition duration-500 ease-in-out"
+            onclick="openModal('modal 2')"
+          >
+            View Details
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- CARD 2 -->
+    <!-- Modal Section -->
+    <div
+      id="modal 2"
+      class="hidden fixed inset-0 bg-black bg-opacity-70 overflow-y-auto h-full w-full flex items-center justify-center z-50"
+      onclick="closeModal(event, 'modal 2')"
+    >
+      <div
+        class="container mx-auto p-4 max-w-2xl bg-white rounded-lg drop-shadow-lg z-50 overflow-y-auto"
+        style="
+          margin-top: 55vh;
+          margin-bottom: 10vh;
+          margin-left: 5vh;
+          margin-right: 5vh;
+        "
+      >
+        <!-- Modal Header -->
+        <div
+          class="flex justify-between items-center py-4 px-6 bg-gray-200 rounded-lg"
+        >
+          <h2 class="text-xl font-semibold text-gray-700">Event Details</h2>
+          <button
+            class="text-gray-700 font-semibold"
+            onclick="closeModal(event, 'modal 2')"
+          >
+            ✖️
+          </button>
+        </div>
+        <!-- Modal Body -->
+        <div class="p-6">
+          <!-- Event Header -->
+          <div class="flex items-center justify-between">
+            <h3 class="text-2xl font-bold">CAREER FAIR x ALTERRA ACADEMY</h3>
+            <span class="text-lg font-bold text-green-500 ml-4">Free</span>
+          </div>
+          <!-- Event Content -->
+          <div class="flex gap-4 my-6">
+            <img
+              src="assets/CFposter.jpg"
+              alt="Event Image"
+              class="w-1/2 rounded-lg object-cover object-center"
+            />
+            <div>
+              <div class="my-2 flex items-center mb-4">
+                <div
+                  class="bg-white p-2 rounded-lg drop-shadow-lg flex items-center"
+                >
+                  <img
+                    src="assets/BEMFILKOMlogo.png"
+                    alt="Company Logo"
+                    class="h-6"
+                  />
+                  <span class="ml-3 text-xs text-gray-500">BEM FILKOM UB</span>
+                </div>
+              </div>
+              <p class="text-sm text-gray-500 mb-4">
+                <span class="font-bold">🗓️ Day, date:</span><br />
+                Sunday, 17 September 2023<br />
+                <span class="font-bold">🕒 Time:</span><br />
+                09.00 - 14.00 WIB<br />
+                <span class="font-bold">📌 Location:</span><br />
+                Auditorium Algoritma FILKOM UB
+              </p>
+              <div class="bg-blue-200 p-2 rounded-lg">
+                <p class="text-sm text-blue-800">
+                  <i class="font-bold">What's Exciting:</i>
+                </p>
+                <ul class="text-sm">
+                  <li>Knowledge Sharing</li>
+                  <li>Seminar</li>
+                  <li>Talkshow</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- More Info and Scan Me -->
+          <div class="flex justify-between mt-4">
+            <!-- Left side: More Information -->
+            <div class="flex flex-col">
+              <div
+                class="px-4 py-2 bg-gray-300 rounded-lg font-semibold mb-4 text-md"
+              >
+                More Information
+              </div>
+              <!-- Social Media Links -->
+              <div class="flex flex-col space-y-2 text-sm">
+                <a
+                  href="https://www.instagram.com/careerfair.filkom/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:underline"
+                >
+                  🎴 Instagram
+                </a>
+                <a
+                  href="https://twitter.com/bemfilkomub/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:underline"
+                >
+                  🃏 Twitter BEM FILKOM UB
+                </a>
+                <a
+                  href="https://bemfilkom.ub.ac.id/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:underline"
+                >
+                  🌐 Website BEM FILKOM UB
+                </a>
+              </div>
+            </div>
+            <!-- Right side: Scan Me and QRCode Image -->
+            <div class="flex flex-col items-center">
+              <div
+                class="px-4 py-2 bg-gray-300 rounded-lg font-semibold md:mr-16"
+              >
+                Scan Me!
+              </div>
+              <img
+                src="assets/CFqrcode.png"
+                alt="QRCode Image"
+                class="w-40 h-w-40 md:mr-16 transform hover:scale-105 transition duration-500 ease-in-out"
+              />
+            </div>
+          </div>
+          <!-- Action Button -->
+          <div class="mt-6">
+            <button
+              id="registerButton"
+              class="w-full bg-green-500 text-white p-3 rounded-lg font-bold hover:bg-green-900 active:bg-green-900 focus:outline-none focus:ring focus:ring-green-500 transform hover:scale-105 transition duration-500 ease-in-out"
+              onclick="registerUser()"
+            >
+              ❗Register Yourself Now❗
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <!-- Main Content Section -->
+    <main class="py-5 px-10 drop-shadow-lg relative z-10">
+      <!-- Event Card Container -->
+      <div class="container mx-auto rounded-lg">
+        <!-- Event Card -->
+        <div
+          class="bg-white relative p-4 rounded-lg drop-shadow-lg my-4 flex flex-wrap items-center"
+        >
+          <div class="w-full md:max-w-80 md:pr-4 md:mb-4 lg:mb-0 lg:ml-5">
+            <img
+              src="assets/JMFposter.jpg"
+              alt="Event Image"
+              class="w-full h-auto rounded-lg object-cover object-center"
+            />
+          </div>
+          <div class="p-2 flex-grow">
+            <span
+              class="bg-blue-200 text-blue-800 text-xs md:text-sm px-2 py-1 inline-block rounded-lg mt-2"
+              >Free Event</span
+            >
+            <!-- Save the Event -->
+            <div
+              class="absolute bottom-48 right-5 flex items-center md:bottom-72 md:right-10"
+            >
+              <img
+                src="assets/save.png"
+                alt="Bookmark Icon"
+                id="save3"
+                class="h-6 w-6 cursor-pointer ml-2 hover:bg-gray-300 active:bg-gray-500 focus:outline-none focus:ring focus:ring-gray-900 transform hover:scale-125 transition duration-500 ease-in-out"
+                onclick="saveEvent('eventSavedPopup3')"
+              />
+            </div>
+            <div
+              id="eventSavedPopup3"
+              class="hidden absolute bottom-48 right-12 bg-white p-2 rounded-lg drop-shadow-lg text-xs md:bottom-72 md:right-20"
+            >
+              Event saved!
+            </div>
+            <p class="text-green-500 text-xs md:text-sm my-2">
+              Organized by
+              <span class="font-bold">UPT BLK Singosari</span>
+            </p>
+            <h2 class="font-bold text-lg md:text-2xl">JOB MARKET FAIR 2023</h2>
+            <p class="text-gray-600 md:text-lg">
+              🗓️ 28 November 2023<br />
+              📌 Job Vacancies and Internship Vacancies
+            </p>
+          </div>
+          <button
+            class="bg-blue-500 text-white px-4 py-2 mt-4 rounded-lg hover:bg-blue-900 active:bg-blue-900 focus:outline-none focus:ring focus:ring-blue-500 md:mr-5 transform hover:scale-105 transition duration-500 ease-in-out"
+            onclick="openModal('modal 3')"
+          >
+            View Details
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- CARD 3 -->
+    <!-- Modal Section -->
+    <div
+      id="modal 3"
+      class="hidden fixed inset-0 bg-black bg-opacity-70 overflow-y-auto h-full w-full flex items-center justify-center z-50"
+      onclick="closeModal(event, 'modal 3')"
+    >
+      <div
+        class="container mx-auto p-4 max-w-2xl bg-white rounded-lg drop-shadow-lg z-50 overflow-y-auto"
+        style="
+          margin-top: 55vh;
+          margin-bottom: 10vh;
+          margin-left: 5vh;
+          margin-right: 5vh;
+        "
+      >
+        <!-- Modal Header -->
+        <div
+          class="flex justify-between items-center py-4 px-6 bg-gray-200 rounded-lg"
+        >
+          <h2 class="text-xl font-semibold text-gray-700">Event Details</h2>
+          <button
+            class="text-gray-700 font-semibold"
+            onclick="closeModal(event, 'modal 3')"
+          >
+            ✖️
+          </button>
+        </div>
+        <!-- Modal Body -->
+        <div class="p-6">
+          <!-- Event Header -->
+          <div class="flex items-center justify-between">
+            <h3 class="text-2xl font-bold">JOB MARKET FAIR 2023</h3>
+            <span class="text-lg font-bold text-green-500 ml-4">Free</span>
+          </div>
+          <!-- Event Content -->
+          <div class="flex gap-4 my-6">
+            <img
+              src="assets/JMFposter.jpg"
+              alt="Event Image"
+              class="w-1/2 rounded-lg object-cover object-center"
+            />
+            <div>
+              <div class="my-2 flex items-center mb-4">
+                <div
+                  class="bg-white p-2 rounded-lg drop-shadow-lg flex items-center"
+                >
+                  <img
+                    src="assets/JMFlogo.png"
+                    alt="Company Logo"
+                    class="h-6"
+                  />
+                  <span class="ml-3 text-xs text-gray-500"
+                    >UPT BLK Singosari</span
+                  >
+                </div>
+              </div>
+              <p class="text-sm text-gray-500 mb-4">
+                <span class="font-bold">🗓️ Day, date:</span><br />
+                Tuesday, 28 November 2023<br />
+                <span class="font-bold">🕒 Time:</span><br />
+                09.00 - 15.00 WIB<br />
+                <span class="font-bold">📌 Location:</span><br />
+                UPT BLK Singosari Office Yard
+              </p>
+              <div class="bg-blue-200 p-2 rounded-lg">
+                <p class="text-sm text-blue-800">
+                  <i class="font-bold">What's Exciting:</i>
+                </p>
+                <ul class="text-sm">
+                  <li>Job Vacancies</li>
+                  <li>Internship Vacancies</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- More Info and Scan Me -->
+          <div class="flex justify-between mt-4">
+            <!-- Left side: More Information -->
+            <div class="flex flex-col">
+              <div
+                class="px-4 py-2 bg-gray-300 rounded-lg font-semibold mb-4 text-md"
+              >
+                More Information
+              </div>
+              <!-- Social Media Links -->
+              <div class="flex flex-col space-y-2 text-sm">
+                <a
+                  href="https://www.instagram.com/blk_singosari/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:underline"
+                >
+                  🎴 Instagram
+                </a>
+                <a
+                  href="https://kelembagaan.kemnaker.go.id/home/companies/ad50f3a2-d893-4b74-90dc-6449feda1690/profiles"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:underline"
+                >
+                  🌐 Website Kemnaker
+                </a>
+                <a
+                  href="https://disnakertrans.jatimprov.go.id/page/upt-blk-singosari-64ae5d3b95fff"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:underline"
+                >
+                  🌐 Website Disnakertrans Jatim
+                </a>
+              </div>
+            </div>
+            <!-- Right side: Scan Me and QRCode Image -->
+            <div class="flex flex-col items-center">
+              <div
+                class="px-4 py-2 bg-gray-300 rounded-lg font-semibold md:mr-16"
+              >
+                Scan Me!
+              </div>
+              <img
+                src="assets/JMFqrcode.png"
+                alt="QRCode Image"
+                class="w-40 h-w-40 md:mr-16 transform hover:scale-105 transition duration-500 ease-in-out"
+              />
+            </div>
+          </div>
+          <!-- Action Button -->
+          <div class="mt-6">
+            <button
+              id="registerButton"
+              class="w-full bg-green-500 text-white p-3 rounded-lg font-bold hover:bg-green-900 active:bg-green-900 focus:outline-none focus:ring focus:ring-green-500 transform hover:scale-105 transition duration-500 ease-in-out"
+              onclick="registerUser()"
+            >
+              ❗Register Yourself Now❗
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loading Popup -->
+    <div
+      id="loadingPopup"
+      class="hidden fixed inset-0 bg-black bg-opacity-70 overflow-y-auto h-full w-full flex items-center justify-center z-50"
+    >
+      <div
+        class="bg-white p-8 rounded-lg shadow-lg flex items-center justify-center space-x-4"
+      >
+        <div
+          class="animate-spin w-12 h-12 border-t-4 border-green-500 rounded-full"
+        ></div>
+        <p class="text-center text-lg md:text-2xl font-semibold">
+          Registration is in process...
+        </p>
+      </div>
+    </div>
+
+    <!-- Success Popup -->
+    <div
+      id="successPopup"
+      class="hidden fixed inset-0 bg-black bg-opacity-70 overflow-y-auto h-full w-full flex items-center justify-center z-50"
+    >
+      <div class="bg-white p-4 rounded-lg shadow-lg">
+        <p class="text-center text-lg md:text-2xl font-semibold">
+          🎉 Registration is successful 🎉<br />
+          <span class="text-sm md:text-base font-normal"
+            >Your registration for the event you want to join was
+            successful.</span
+          >
+        </p>
+      </div>
+    </div>
+
+    <!-- Rating and Feedback Popup -->
+    <div
+      id="ratingFeedbackPopup"
+      class="hidden fixed inset-0 bg-black bg-opacity-70 overflow-y-auto h-full w-full flex items-center justify-center z-50"
+    >
+      <div
+        class="container mx-auto p-4 max-w-2xl bg-white rounded-lg drop-shadow-lg z-50"
+        style="margin-left: 5vh; margin-right: 5vh"
+      >
+        <!-- Popup Header -->
+        <div
+          class="flex justify-between items-center py-4 px-6 bg-gray-200 rounded-lg"
+        >
+          <h2 class="text-xl font-semibold text-gray-700">
+            Rating and Feedback
+          </h2>
+          <button
+            class="text-gray-700 font-semibold"
+            onclick="closeRatingFeedbackPopup()"
+          >
+            ✖️
+          </button>
+        </div>
+        <!-- Popup Body -->
+        <div class="p-6">
+          <!-- Star Ratings -->
+          <div class="flex items-center space-x-4 mb-4 justify-center">
+            <img
+              src="assets/star.png"
+              alt="Star"
+              class="w-12 h-12 md:w-16 md:h-16 cursor-pointer transform hover:scale-125 transition duration-500 ease-in-out"
+              onclick="rate(1)"
+            />
+            <img
+              src="assets/star.png"
+              alt="Star"
+              class="w-12 h-12 md:w-16 md:h-16 cursor-pointer transform hover:scale-125 transition duration-500 ease-in-out"
+              onclick="rate(2)"
+            />
+            <img
+              src="assets/star.png"
+              alt="Star"
+              class="w-12 h-12 md:w-16 md:h-16 cursor-pointer transform hover:scale-125 transition duration-500 ease-in-out"
+              onclick="rate(3)"
+            />
+            <img
+              src="assets/star.png"
+              alt="Star"
+              class="w-12 h-12 md:w-16 md:h-16 cursor-pointer transform hover:scale-125 transition duration-500 ease-in-out"
+              onclick="rate(4)"
+            />
+            <img
+              src="assets/star.png"
+              alt="Star"
+              class="w-12 h-12 md:w-16 md:h-16 cursor-pointer transform hover:scale-125 transition duration-500 ease-in-out"
+              onclick="rate(5)"
+            />
+          </div>
+          <!-- Display Rating Score -->
+          <div class="mb-6 text-center">
+            <p class="text-sm font-semibold">
+              Your Rating: <span id="ratingScore">0</span> / 5
+            </p>
+          </div>
+          <!-- Feedback Text Field -->
+          <textarea
+            id="feedbackInput"
+            class="w-full p-2 border border-gray-300 rounded-lg mb-4 placeholder:italic"
+            placeholder="Kindly give us your feedback..."
+          ></textarea>
+          <!-- Buttons: Later and Send -->
+          <div class="flex justify-end">
+            <button
+              class="bg-gray-200 text-gray-500 hover:text-white px-4 py-2 mr-2 rounded-lg hover:bg-gray-700 active:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-500"
+              onclick="closeRatingFeedbackPopup()"
+            >
+              Later
+            </button>
+            <button
+              class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-700 active:bg-green-700 focus:outline-none focus:ring focus:ring-green-500"
+              onclick="sendRatingFeedback()"
+            >
+              Send
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Submit Feedback Popup -->
+    <div
+      id="submitFeedback"
+      class="hidden fixed inset-0 bg-black bg-opacity-70 overflow-y-auto h-full w-full flex items-center justify-center z-50"
+    >
+      <div class="bg-white p-4 rounded-lg shadow-lg">
+        <p class="text-center text-lg md:text-2xl font-semibold">
+          ✨ Thank You ✨<br />
+          <span class="text-sm md:text-base font-normal"
+            >Your rating and feedback have been noted.</span
+          >
+        </p>
+      </div>
+    </div>
+
+    <!-- Contact Person Section -->
+    <div
+      class="w-full bg-center px-5 py-24 bg-cover bg-no-repeat"
+      style="
+        background-image: linear-gradient(
+            to left,
+            rgba(0, 0, 0, 0),
+            rgb(255, 255, 255)
+          ),
+          url('https://images.unsplash.com/photo-1531973576160-7125cd663d86?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+      "
+    >
+      <div class="p-4 md:ml-10">
+        <div class="menu-image"></div>
+        <strong><p>📞 Contact Person</p></strong>
+        <p>+62 85736498376</p>
+      </div>
+      <div class="p-4 md:ml-10">
+        <div class="menu-image"></div>
+        <strong><p>✉️ Email Address</p></strong>
+        <p>sleeveup@gmail.com</p>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="flex justify-between items-center px-4 py-6 mx-2">
+      <div class="container-list-left md:ml-14">
+        <p>Made with ❤️:</p>
+        <h3 class="font-bold text-lg md:text-xl">SleeveUp!</h3>
+      </div>
+      <div class="container-list-right md:mr-14">
+        <p>A part of</p>
+        <h3 class="font-bold text-lg md:text-xl">Brawijaya University</h3>
+      </div>
+    </footer>
+
+    <script>
+      // Function to open modal
+      function openModal(modalId) {
+        document.getElementById(modalId).classList.remove("hidden");
+      }
+
+      // Function to close modal
+      function closeModal(event, modalId) {
+        if (event) {
+          const modalContent = document.querySelector(".container");
+          if (modalContent && !modalContent.contains(event.target)) {
+            document.getElementById(modalId).classList.add("hidden");
+          }
+        } else {
+          document.getElementById(modalId).classList.add("hidden");
+        }
+      }
+
+      // Function to save event
+      function saveEvent(popupId) {
+        const eventSavedPopup = document.getElementById(popupId);
+        eventSavedPopup.classList.remove("hidden");
+        setTimeout(() => {
+          eventSavedPopup.classList.add("hidden");
+        }, 2000); // Hide the popup after 2 seconds
+      }
+
+      // Function to register
+      function registerUser() {
+        // Show the loading popup
+        document.getElementById("loadingPopup").classList.remove("hidden");
+
+        // Simulate a registration process (you can replace this with your actual registration logic)
+        setTimeout(() => {
+          // Hide the loading popup
+          document.getElementById("loadingPopup").classList.add("hidden");
+
+          // Show the success popup
+          document.getElementById("successPopup").classList.remove("hidden");
+
+          // Hide the success popup after 5 seconds
+          setTimeout(() => {
+            document.getElementById("successPopup").classList.add("hidden");
+            // Open the rating and feedback popup
+            openRatingFeedbackPopup();
+          }, 3000);
+        }, 5000); // Simulate a 5-second registration process
+      }
+
+      // Function to open rating and feedback popup
+      function openRatingFeedbackPopup() {
+        document
+          .getElementById("ratingFeedbackPopup")
+          .classList.remove("hidden");
+      }
+
+      // Function to close rating and feedback popup
+      function closeRatingFeedbackPopup() {
+        document.getElementById("ratingFeedbackPopup").classList.add("hidden");
+      }
+
+      // Function to handle star rating
+      function rate(stars) {
+        console.log(`User rated with ${stars} stars`);
+        // Update the displayed rating score
+        document.getElementById("ratingScore").innerText = stars;
+      }
+
+      // Function to handle sending rating and feedback
+      function sendRatingFeedback() {
+        console.log("Sending rating and feedback...");
+
+        document.getElementById("submitFeedback").classList.remove("hidden");
+        setTimeout(() => {
+          document.getElementById("submitFeedback").classList.add("hidden");
+        }, 3000); // Hide the popup after 3 seconds
+
+        // Close the rating and feedback popup
+        closeRatingFeedbackPopup();
+      }
+
+      // Make blur effect on navbar
+      window.addEventListener("scroll", function () {
+        var nav = document.querySelector("nav");
+        if (window.scrollY > 0) {
+          nav.classList.add("backdrop-blur-sm");
+          nav.classList.add("bg-opacity-70");
+        } else {
+          nav.classList.remove("backdrop-blur-sm");
+          nav.classList.remove("bg-opacity-70");
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SleeveUp - Rating & Feedback</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar Section -->
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-sm bg-opacity-70 bg-white"
+    >
+      <div class="flex justify-between items-center py-6 px-4 md:mx-14">
+        <ul class="flex items-center space-x-4 md:space-x-6">
+          <li>
+            <h1
+              class="text-xl font-bold text-black md:text-2xl cursor-pointer relative group"
+            >
+              <a href="./homepage.html">SleeveUp!</a>
+              <span
+                class="absolute inset-x-0 bottom-0 h-1 bg-blue-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom duration-500"
+              ></span>
+            </h1>
+          </li>
+          <li class="cursor-pointer relative group">
+            <a href="./chatbotpage.html">Chatbot</a>
+            <span
+              class="absolute inset-x-0 bottom-0 h-1 bg-blue-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom duration-500"
+            ></span>
+          </li>
+          <li class="cursor-pointer relative group">
+            <a href="./feedbackpage.html">Feedback</a>
+            <span
+              class="absolute inset-x-0 bottom-0 h-1 bg-blue-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom duration-500"
+            ></span>
+          </li>
+        </ul>
+        <ul class="flex items-center space-x-4 md:space-x-6">
+          <li class="cursor-pointer relative group">
+            <a href="./signup.html">Register</a>
+            <span
+              class="absolute inset-x-0 bottom-0 h-1 bg-blue-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom duration-500"
+            ></span>
+          </li>
+          <li class="cursor-pointer relative group">
+            <a href="./signup.html">Sign-in</a>
+            <span
+              class="absolute inset-x-0 bottom-0 h-1 bg-blue-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom duration-500"
+            ></span>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Container Section -->
+    <section id="hero-container">
+      <div
+        class="bg-cover text-white text-center pb-36 pt-48 bg-no-repeat bg-center"
+        style="
+          background-image: linear-gradient(
+              to bottom,
+              rgba(0, 0, 0, 0),
+              rgba(0, 0, 0, 1)
+            ),
+            url('https://images.unsplash.com/photo-1589187775328-882e91b3db4f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        "
+      >
+        <h1 class="text-3xl md:text-5xl mb-3 font-bold drop-shadow-lg">
+          Rating & Feedback.
+        </h1>
+        <p class="px-10 drop-shadow-lg text-lg md:text-xl">
+          <i>Your Rating and Feedback are Key to Building a Better Future.</i>
+        </p>
+      </div>
+    </section>
+
+    <!-- Rating and Feedback Section -->
+    <section
+      id="ratingFeedbackSection"
+      class="max-w-screen-lg mx-auto my-16 px-4 pt-4 bg-white"
+    >
+      <!-- Star Ratings -->
+      <div class="mx-2 mb-4 w-full">
+        <h2 class="text-xl md:text-3xl font-bold">Hello! 👋🏻</h2>
+        <p class="md:text-lg mb-3 md:mb-6">
+          Let us know what you're experiencing, share your joys or sorrows, and
+          give us your ratings and feedback to help us make a better future.
+        </p>
+      </div>
+      <div class="bg-slate-200 rounded-lg py-4">
+        <div class="mx-2 mb-4 w-full">
+          <p class="md:text-lg text-center font-bold">
+            Kindly give us your rating.
+          </p>
+        </div>
+        <div class="flex items-center space-x-4 mb-5 justify-center">
+          <img
+            src="assets/star.png"
+            alt="Star"
+            class="w-12 h-12 md:w-16 md:h-16 cursor-pointer transform hover:scale-125 transition duration-500 ease-in-out"
+            onclick="rate(1)"
+          />
+          <img
+            src="assets/star.png"
+            alt="Star"
+            class="w-12 h-12 md:w-16 md:h-16 cursor-pointer transform hover:scale-125 transition duration-500 ease-in-out"
+            onclick="rate(2)"
+          />
+          <img
+            src="assets/star.png"
+            alt="Star"
+            class="w-12 h-12 md:w-16 md:h-16 cursor-pointer transform hover:scale-125 transition duration-500 ease-in-out"
+            onclick="rate(3)"
+          />
+          <img
+            src="assets/star.png"
+            alt="Star"
+            class="w-12 h-12 md:w-16 md:h-16 cursor-pointer transform hover:scale-125 transition duration-500 ease-in-out"
+            onclick="rate(4)"
+          />
+          <img
+            src="assets/star.png"
+            alt="Star"
+            class="w-12 h-12 md:w-16 md:h-16 cursor-pointer transform hover:scale-125 transition duration-500 ease-in-out"
+            onclick="rate(5)"
+          />
+        </div>
+        <!-- Display Rating Score -->
+        <div class="text-center">
+          <p class="text-sm font-semibold">
+            Your Rating: <span id="ratingScore">0</span> / 5
+          </p>
+        </div>
+      </div>
+      <!-- Feedback Text Field -->
+      <div class="mx-2 mb-2 mt-4 w-full">
+        <p class="md:text-lg text-center font-bold">
+          and kindly give us your feedback.
+        </p>
+      </div>
+      <textarea
+        id="feedbackInput"
+        class="w-full p-2 border border-gray-300 rounded-lg mb-4 placeholder:italic"
+        placeholder="Leave us your feedback here..."
+      ></textarea>
+      <!-- Buttons: Later and Send -->
+      <div class="flex justify-center items-center">
+        <button
+          class="bg-green-500 text-white px-4 py-2 mt-2 mb-4 md:text-lg rounded-full hover:bg-green-700 active:bg-green-700 focus:outline-none focus:ring focus:ring-green-500 outline outline-offset-4 outline-gray-500 outline-1 transform hover:scale-105 transition duration-500 ease-in-out"
+          onclick="sendRatingFeedback()"
+        >
+          ✍🏻 Submit Your Rating and Feedback ✍🏻
+        </button>
+      </div>
+    </section>
+
+    <!-- Submit Rating and Feedback Popup -->
+    <div
+      id="submitFeedback"
+      class="hidden fixed inset-0 bg-black bg-opacity-70 overflow-y-auto h-full w-full flex items-center justify-center z-50"
+    >
+      <div class="bg-white p-4 rounded-lg shadow-lg">
+        <p class="text-center text-lg md:text-2xl font-semibold">
+          ✨ Thank You ✨<br />
+          <span class="text-sm md:text-lg font-normal"
+            >Your rating and feedback have been noted.</span
+          >
+        </p>
+      </div>
+    </div>
+
+    <!-- Contact Person Section -->
+    <div
+      class="w-full bg-center px-5 py-24 bg-cover bg-no-repeat"
+      style="
+        background-image: linear-gradient(
+            to left,
+            rgba(0, 0, 0, 0),
+            rgb(255, 255, 255)
+          ),
+          url('https://images.unsplash.com/photo-1531973576160-7125cd663d86?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+      "
+    >
+      <div class="p-4 md:ml-10">
+        <div class="menu-image"></div>
+        <strong><p>📞 Contact Person</p></strong>
+        <p>+62 85736498376</p>
+      </div>
+      <div class="p-4 md:ml-10">
+        <div class="menu-image"></div>
+        <strong><p>✉️ Email Address</p></strong>
+        <p>sleeveup@gmail.com</p>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="flex justify-between items-center px-4 py-6 mx-2">
+      <div class="container-list-left md:ml-14">
+        <p>Made with ❤️:</p>
+        <h3 class="font-bold text-lg md:text-xl">SleeveUp!</h3>
+      </div>
+      <div class="container-list-right md:mr-14">
+        <p>A part of</p>
+        <h3 class="font-bold text-lg md:text-xl">Brawijaya University</h3>
+      </div>
+    </footer>
+
+    <script>
+      // Function to handle star rating
+      function rate(stars) {
+        console.log(`User rated with ${stars} stars`);
+        // Update the displayed rating score
+        document.getElementById("ratingScore").innerText = stars;
+      }
+
+      // Function to handle sending rating and feedback
+      function sendRatingFeedback() {
+        console.log("Sending rating and feedback...");
+
+        document.getElementById("submitFeedback").classList.remove("hidden");
+        setTimeout(() => {
+          document.getElementById("submitFeedback").classList.add("hidden");
+        }, 3000); // Hide the popup after 3 seconds
+      }
+
+      // Make blur effect on navbar
+      window.addEventListener("scroll", function () {
+        var nav = document.querySelector("nav");
+        if (window.scrollY > 0) {
+          nav.classList.add("backdrop-blur-sm");
+          nav.classList.add("bg-opacity-70");
+        } else {
+          nav.classList.remove("backdrop-blur-sm");
+          nav.classList.remove("bg-opacity-70");
+        }
+      });
+    </script>
+  </body>
+</html>

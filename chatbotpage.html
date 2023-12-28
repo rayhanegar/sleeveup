@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SleeveUp - Chatbot</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar Section -->
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-sm bg-opacity-70 bg-white"
+    >
+      <div class="flex justify-between items-center py-6 px-4 md:mx-14">
+        <ul class="flex items-center space-x-4 md:space-x-6">
+          <li>
+            <h1
+              class="text-xl font-bold text-black md:text-2xl cursor-pointer relative group"
+            >
+              <a href="./homepage.html">SleeveUp!</a>
+              <span
+                class="absolute inset-x-0 bottom-0 h-1 bg-blue-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom duration-500"
+              ></span>
+            </h1>
+          </li>
+          <li class="cursor-pointer relative group">
+            <a href="./chatbotpage.html">Chatbot</a>
+            <span
+              class="absolute inset-x-0 bottom-0 h-1 bg-blue-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom duration-500"
+            ></span>
+          </li>
+          <li class="cursor-pointer relative group">
+            <a href="./feedbackpage.html">Feedback</a>
+            <span
+              class="absolute inset-x-0 bottom-0 h-1 bg-blue-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom duration-500"
+            ></span>
+          </li>
+        </ul>
+        <ul class="flex items-center space-x-4 md:space-x-6">
+          <li class="cursor-pointer relative group">
+            <a href="./signup.html">Register</a>
+            <span
+              class="absolute inset-x-0 bottom-0 h-1 bg-blue-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom duration-500"
+            ></span>
+          </li>
+          <li class="cursor-pointer relative group">
+            <a href="./signup.html">Sign-in</a>
+            <span
+              class="absolute inset-x-0 bottom-0 h-1 bg-blue-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom duration-500"
+            ></span>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Container Section -->
+    <section id="hero-container">
+      <div
+        class="bg-cover text-white text-center pb-36 pt-48 bg-no-repeat bg-center"
+        style="
+          background-image: linear-gradient(
+              to bottom,
+              rgba(0, 0, 0, 0),
+              rgba(0, 0, 0, 1)
+            ),
+            url('https://images.unsplash.com/photo-1692607431230-5fabd2b717cb?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        "
+      >
+        <h1 class="text-3xl md:text-5xl mb-3 font-bold drop-shadow-lg">
+          SleeveUp Chatbot.
+        </h1>
+        <p class="px-10 drop-shadow-lg text-lg md:text-xl">
+          <i
+            >Help you answer questions and solve problems quickly and
+            precisely.</i
+          >
+        </p>
+      </div>
+    </section>
+
+    <!-- Chatbot Section -->
+    <section class="max-w-screen-lg mx-auto my-8 px-4 pt-4 bg-white">
+      <div class="max-h-screen overflow-y-auto mb-4">
+        <!-- Chat messages will be displayed here -->
+      </div>
+      <div class="px-4 pt-5 pb-20 mt-8 md:w-full">
+        <div id="welcome display 1">
+          <h2 class="text-xl md:text-3xl font-bold">Hi! 👋🏻</h2>
+          <p class="text-lg md:text-2xl mb-3 md:mb-6">
+            Let me know what you need, or choose from the following suggestions.
+          </p>
+        </div>
+        <div
+          id="welcome display 2"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4"
+        >
+          <div
+            class="bg-gradient-to-tr from-blue-300 to-gray-300 p-4 rounded-lg"
+          >
+            <h3 class="text-lg md:text-3xl font-bold mb-3 ml-2">
+              Understand 💫
+            </h3>
+            <button
+              class="bg-gray-50 text-black text-sm md:text-lg py-1 px-3 mx-1 my-1 rounded-full hover:bg-gray-400 hover:text-white active:bg-gray-400 focus:outline-none focus:ring focus:ring-gray-500 transform hover:scale-105 transition duration-500 ease-in-out"
+              onclick="fillMessage('Internship Benefits')"
+            >
+              Internship Benefits
+            </button>
+            <button
+              class="bg-gray-50 text-black text-sm md:text-lg py-1 px-3 mx-1 my-1 rounded-full hover:bg-gray-400 hover:text-white active:bg-gray-400 focus:outline-none focus:ring focus:ring-gray-500 transform hover:scale-105 transition duration-500 ease-in-out"
+              onclick="fillMessage('Job Requirements')"
+            >
+              Job Requirements
+            </button>
+            <button
+              class="bg-gray-50 text-black text-sm md:text-lg py-1 px-3 mx-1 my-1 rounded-full hover:bg-gray-400 hover:text-white active:bg-gray-400 focus:outline-none focus:ring focus:ring-gray-500 transform hover:scale-105 transition duration-500 ease-in-out"
+              onclick="fillMessage('Work Culture')"
+            >
+              Work Culture
+            </button>
+          </div>
+          <div
+            class="bg-gradient-to-tr from-green-300 to-gray-300 p-4 rounded-lg"
+          >
+            <h3 class="text-lg md:text-3xl font-bold mb-3 ml-2">Create 🪄</h3>
+            <button
+              class="bg-gray-50 text-black text-sm md:text-lg py-1 px-3 mx-1 my-1 rounded-full hover:bg-gray-400 hover:text-white active:bg-gray-400 focus:outline-none focus:ring focus:ring-gray-500 transform hover:scale-105 transition duration-500 ease-in-out"
+              onclick="fillMessage('Resume Tips')"
+            >
+              Resume Tips
+            </button>
+            <button
+              class="bg-gray-50 text-black text-sm md:text-lg py-1 px-3 mx-1 my-1 rounded-full hover:bg-gray-400 hover:text-white active:bg-gray-400 focus:outline-none focus:ring focus:ring-gray-500 transform hover:scale-105 transition duration-500 ease-in-out"
+              onclick="fillMessage('Cover Letter')"
+            >
+              Cover Letter
+            </button>
+            <button
+              class="bg-gray-50 text-black text-sm md:text-lg py-1 px-3 mx-1 my-1 rounded-full hover:bg-gray-400 hover:text-white active:bg-gray-400 focus:outline-none focus:ring focus:ring-gray-500 transform hover:scale-105 transition duration-500 ease-in-out"
+              onclick="fillMessage('Job Application')"
+            >
+              Job Application
+            </button>
+          </div>
+          <div
+            class="bg-gradient-to-tr from-violet-300 to-gray-300 p-4 rounded-lg"
+          >
+            <h3 class="text-lg md:text-3xl font-bold mb-3 ml-2">Explore ✨</h3>
+            <button
+              class="bg-gray-50 text-black text-sm md:text-lg py-1 px-3 mx-1 my-1 rounded-full hover:bg-gray-400 hover:text-white active:bg-gray-400 hove:text-white focus:outline-none focus:ring focus:ring-gray-500 transform hover:scale-105 transition duration-500 ease-in-out"
+              onclick="fillMessage('Career Opportunities')"
+            >
+              Career Opportunities
+            </button>
+            <button
+              class="bg-gray-50 text-black text-sm md:text-lg py-1 px-3 mx-1 my-1 rounded-full hover:bg-gray-400 hover:text-white active:bg-gray-400 hove:text-white focus:outline-none focus:ring focus:ring-gray-500 transform hover:scale-105 transition duration-500 ease-in-out"
+              onclick="fillMessage('Internship Search')"
+            >
+              Internship Search
+            </button>
+            <button
+              class="bg-gray-50 text-black text-sm md:text-lg py-1 px-3 mx-1 my-1 rounded-full hover:bg-gray-400 hover:text-white active:bg-gray-400 hove:text-white focus:outline-none focus:ring focus:ring-gray-500 transform hover:scale-105 transition duration-500 ease-in-out"
+              onclick="fillMessage('Job Interview')"
+            >
+              Job Interview
+            </button>
+          </div>
+        </div>
+        <div id="welcome display 3">
+          <p class="text-sm md:text-md mb-8 text-slate-500 text-center">
+            Note: For currently available features, it's recommended that the
+            words entered contain the "suggestions" provided, for example, "What
+            is a job interview?".
+          </p>
+        </div>
+        <div class="flex items-center justify-center md:mx-8">
+          <!-- New Topic Button -->
+          <button
+            class="bg-blue-500 text-white py-2 px-2 md:py-1 rounded-full hover:bg-blue-700 active:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-500 mr-3 text-xs md:text-sm outline outline-offset-4 outline-gray-500 outline-1 transform hover:scale-110 transition duration-500 ease-in-out"
+            onclick="refreshPage()"
+          >
+            New Topic
+          </button>
+          <div
+            class="flex items-center space-x-2 p-2 rounded-full bg-white w-full max-w-[22rem] md:max-w-lg lg:max-w-2xl mx-auto border border-gray-500"
+          >
+            <input
+              type="text"
+              placeholder="Let's try to say 'Hi'!"
+              class="placeholder:italic placeholder:text-sm placeholder:md:text-lg placeholder:text-slate-400 flex-grow border-none focus:outline-none bg-transparent text-black ml-3"
+              id="chat-input"
+            />
+            <button
+              class="bg-green-500 text-white py-1 px-3 rounded-full hover:bg-green-900 active:bg-green-900 focus:outline-none focus:ring focus:ring-green-500 transform hover:scale-105 transition duration-500 ease-in-out"
+              onclick="sendMessage()"
+            >
+              Send
+            </button>
+          </div>
+          <!-- Upload File Button -->
+          <label
+            for="file-upload"
+            class="bg-blue-500 text-white py-2 px-2 md:py-1 rounded-full hover:bg-blue-700 active:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-500 cursor-pointer flex items-center justify-center ml-3 text-xs md:text-sm outline outline-offset-4 outline-gray-500 outline-1 transform hover:scale-110 transition duration-500 ease-in-out"
+          >
+            Upload File
+          </label>
+          <input type="file" id="file-upload" class="hidden" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Person Section -->
+    <div
+      class="w-full bg-center px-5 py-24 bg-cover bg-no-repeat"
+      style="
+        background-image: linear-gradient(
+            to left,
+            rgba(0, 0, 0, 0),
+            rgb(255, 255, 255)
+          ),
+          url('https://images.unsplash.com/photo-1531973576160-7125cd663d86?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+      "
+    >
+      <div class="p-4 md:ml-10">
+        <div class="menu-image"></div>
+        <strong><p>📞 Contact Person</p></strong>
+        <p>+62 85736498376</p>
+      </div>
+      <div class="p-4 md:ml-10">
+        <div class="menu-image"></div>
+        <strong><p>✉️ Email Address</p></strong>
+        <p>sleeveup@gmail.com</p>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="flex justify-between items-center px-4 py-6 mx-2">
+      <div class="container-list-left md:ml-14">
+        <p>Made with ❤️:</p>
+        <h3 class="font-bold text-lg md:text-xl">SleeveUp!</h3>
+      </div>
+      <div class="container-list-right md:mr-14">
+        <p>A part of</p>
+        <h3 class="font-bold text-lg md:text-xl">Brawijaya University</h3>
+      </div>
+    </footer>
+
+    <script>
+      function fillMessage(buttonText) {
+        // Get the input field
+        var searchInput = document.getElementById("chat-input");
+
+        // Set the value of the input field to the text of the clicked button
+        searchInput.value = buttonText;
+      }
+
+      function sendMessage() {
+        var messageInput = document.getElementById("chat-input");
+        var message = messageInput.value;
+
+        if (message.trim() !== "") {
+          appendUserMessage(message);
+          messageInput.value = "";
+        }
+      }
+
+      function appendUserMessage(message) {
+        // Hide the welcome display
+        var welcomeDisplay = document.getElementById("welcome display 1");
+        welcomeDisplay.style.display = "none";
+        var welcomeDisplay = document.getElementById("welcome display 2");
+        welcomeDisplay.style.display = "none";
+
+        var chatMessages = document.querySelector(".max-h-screen");
+        var userMessageElement = document.createElement("div");
+        userMessageElement.textContent = message;
+        userMessageElement.className =
+          "bg-blue-500 text-white p-4 mb-2 rounded-xl max-w-96 ml-auto md:max-w-md";
+        chatMessages.appendChild(userMessageElement);
+
+        // Call the handleBotResponse function after 2 seconds
+        setTimeout(function () {
+          handleBotResponse(message);
+        }, 2000);
+      }
+
+      function handleBotResponse(userMessage) {
+        var chatMessages = document.querySelector(".max-h-screen");
+        var botResponseElement = document.createElement("div");
+        botResponseElement.textContent = getBotResponse(userMessage);
+        botResponseElement.className =
+          "bg-gray-300 text-black p-4 mb-2 rounded-xl max-w-96 md:max-w-md";
+        chatMessages.appendChild(botResponseElement);
+      }
+
+      function getBotResponse(message) {
+        // Simple FAQ responses
+        var responses = {
+          "Internship Benefit":
+            "Internships provide practical experience in a professional setting, allowing you to apply theoretical knowledge in real-world scenarios. They enhance your skills, both technical and soft skills like communication and teamwork. Internships also offer networking opportunities, giving you the chance to build relationships with professionals in your field, which can be beneficial for future job opportunities.",
+          "Internship Benefits":
+            "Internships provide practical experience in a professional setting, allowing you to apply theoretical knowledge in real-world scenarios. They enhance your skills, both technical and soft skills like communication and teamwork. Internships also offer networking opportunities, giving you the chance to build relationships with professionals in your field, which can be beneficial for future job opportunities.",
+          "Job Requirement":
+            "Job requirements are the specific criteria that a candidate must meet to be considered for a position. These may include specific skills, such as proficiency in a certain software or language, educational qualifications like a bachelor’s degree or a master’s degree in a relevant field, and relevant work experience. Some jobs may also require certifications or licenses. It’s important to thoroughly understand the job requirements before applying to ensure a good fit.",
+          "Job Requirements":
+            "Job requirements are the specific criteria that a candidate must meet to be considered for a position. These may include specific skills, such as proficiency in a certain software or language, educational qualifications like a bachelor’s degree or a master’s degree in a relevant field, and relevant work experience. Some jobs may also require certifications or licenses. It’s important to thoroughly understand the job requirements before applying to ensure a good fit.",
+          "Work Culture":
+            "Work culture refers to the environment, values, behaviors, and expectations within a workplace. It includes aspects like work-life balance, management style, company values, office norms, and employee recognition. A positive work culture can lead to increased job satisfaction, better performance, and reduced stress among employees.",
+          "Resume Tips":
+            "A resume should be concise and tailored to the job you’re applying for. Highlight your most relevant skills and experiences that align with the job requirements. Use action verbs and quantify achievements where possible. Also, ensure your resume is free of errors and has a clean, organized layout.",
+          "Cover Letter":
+            "A cover letter should be personalized for each job application. It should express your interest in the role and showcase how your skills and experiences align with the job requirements. The cover letter is your chance to tell your story and show why you would be a great fit for the role. Remember to keep it professional and proofread for any errors.",
+          "Job Application":
+            "When completing a job application, make sure to read the instructions carefully and provide all the required information. This may include personal details, educational background, work experience, and references. Attach all required documents like a resume and cover letter. Ensure all information provided is accurate and truthful.",
+          "Career Opportunities":
+            "Career opportunities can be explored through various channels. Job boards and company websites often list open positions. Networking events and career fairs are also great places to meet industry professionals and learn about potential job openings. Additionally, leveraging social media platforms like LinkedIn can help you discover new opportunities.",
+          "Career Opportunity":
+            "Career opportunities can be explored through various channels. Job boards and company websites often list open positions. Networking events and career fairs are also great places to meet industry professionals and learn about potential job openings. Additionally, leveraging social media platforms like LinkedIn can help you discover new opportunities.",
+          "Internship Search":
+            "Internship opportunities can be found on various platforms. Many companies list internship positions on their websites. University career services often have resources to help students find internships. There are also websites dedicated to listing internship opportunities. Networking can also be a valuable tool in finding internships",
+          "Job Interview":
+            "A job interview is an opportunity to showcase your skills and qualifications to potential employers. It’s also a chance for you to learn more about the role and the company. Prepare by researching the company and practicing answers to common interview questions. Remember to dress professionally, arrive on time, and ask thoughtful questions at the end of the interview.",
+          "Thank You":
+            "You're welcome! Feel free to be in touch if you need further assistance 🤩. -SleeveUp Chatbot",
+          Thanks:
+            "You're welcome! Feel free to be in touch if you need further assistance 🤩. -SleeveUp Chatbot",
+          Hi: "Hello, I'm SleeveUp Chatbot 🤖, is there anything I can help you with?",
+          Hai: "Hello, I'm SleeveUp Chatbot 🤖, is there anything I can help you with?",
+          Hello: "Hi, is there anything I can help you with?",
+          Halo: "Hi, is there anything I can help you with?",
+        };
+
+        // Check if the message matches any predefined question
+        for (var question in responses) {
+          if (message.toLowerCase().includes(question.toLowerCase())) {
+            return responses[question];
+          }
+        }
+
+        // Default response for unrecognized questions
+        return "Sorry, I don't understand your question. Please try another question.";
+      }
+
+      function refreshPage() {
+        // Add your logic to refresh the page here
+        location.reload();
+      }
+
+      // Make blur effect on navbar
+      window.addEventListener("scroll", function () {
+        var nav = document.querySelector("nav");
+        if (window.scrollY > 0) {
+          nav.classList.add("backdrop-blur-sm");
+          nav.classList.add("bg-opacity-70");
+        } else {
+          nav.classList.remove("backdrop-blur-sm");
+          nav.classList.remove("bg-opacity-70");
+        }
+      });
+    </script>
+  </body>
+</html>

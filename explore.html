@@ -1,296 +1,397 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            SleeveUp - Explore
-        </title>
-        <link rel="stylesheet" href="explore-style.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <script src="navigation.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <nav>
-            <ul class="nav-list-left">
-                <li><h1 class="sleeve-up-nav" id="sleeveUpNav">SleeveUp!</h1></li>
-                <li>Chatbot</li>
-                <li>Feedback</li>
-            </ul>
-            <ul class="nav-list-right">
-                <li>Register</li>
-                <li>Sign-in</li>
-            </ul>
-        </nav>
-        <div class="hero-container">
-            <h1>Explore your options.</h1>
-            <p>Find, apply or save it to your collection.
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SleeveUp - Explore</title>
+    <link rel="stylesheet" href="explore-style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="navigation.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Styling for the anchor tag */
+      a {
+        text-decoration: none; /* Remove underline */
+        color: black; /* Set your desired text color */
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul class="nav-list-left">
+        <li>
+          <h1 class="sleeve-up-nav" id="sleeveUpNav">
+            <a href="./homepage.html">SleeveUp!</a>
+          </h1>
+        </li>
+        <li><a href="./chatbotpage.html">Chatbot</a></li>
+        <li><a href="./feedbackpage.html">Feedback</a></li>
+      </ul>
+      <ul class="nav-list-right">
+        <li><a href="./signup.html">Register</a></li>
+        <li><a href="./signup.html">Sign-in</a></li>
+      </ul>
+    </nav>
+    <div class="hero-container">
+      <h1>Explore your options.</h1>
+      <p>Find, apply or save it to your collection.</p>
+      <div class="search-placeholder">
+        <div class="search-keyword">
+          <img
+            class="search-icon"
+            src="./image/icon-search.png"
+            alt="Search Icon"
+          />
+          <input type="text" class="search-form" placeholder="keywords" />
+        </div>
+        <div class="search-category">
+          <img
+            class="search-icon"
+            src="./image/icon-category.png"
+            alt="Category Icon"
+          />
+          <select
+            name="select-category"
+            class="search-form"
+            title="Select Category"
+          >
+            <option value="all">All</option>
+            <option value="software">Software Dev.</option>
+            <option value="product">Product Dev.</option>
+            <option value="network">Computer Network</option>
+            <option value="cybersec">Cyber Security</option>
+            <option value="design">Design</option>
+            <option value="marketing">Marketing</option>
+            <option value="creative">Creative</option>
+          </select>
+        </div>
+        <div class="search-location">
+          <img
+            class="search-icon"
+            src="./image/icon-location.png"
+            alt="Location Icon"
+          />
+          <select
+            name="select-location"
+            class="search-form"
+            title="Select Location"
+          >
+            <option value="anywhere">Anywhere</option>
+            <option value="remote">Remote Working</option>
+            <option value="malang">Malang</option>
+            <option value="surabaya">Surabaya</option>
+            <option value="semarang">Semarang</option>
+            <option value="solo">Solo</option>
+            <option value="yogyakarta">Yogyakarta</option>
+            <option value="bandung">Bandung</option>
+            <option value="jakarta">Jakarta</option>
+            <option value="palembang">Palembang</option>
+            <option value="medan">Medan</option>
+            <option value="pekanbaru">Pekanbaru</option>
+            <option value="batam">Batam</option>
+            <option value="balikpapan">Balikpapan</option>
+            <option value="banjarmasin">Banjarmasin</option>
+            <option value="makassar">Makassar</option>
+            <option value="denpasar">Denpasar</option>
+            <option value="jayapura">Jayapura</option>
+            <option value="tembagapura">Tembagapura</option>
+          </select>
+        </div>
+        <div class="search-button">
+          <h3>Search</h3>
+        </div>
+      </div>
+    </div>
+    <div class="main-container">
+      <div class="filter-container">
+        <h2>Filter from Result</h2>
+        <p></p>
+      </div>
+      <div class="result-container">
+        <div class="result-card">
+          <div class="result-card-row1">
+            <div class="result-card-title">
+              <h2>Job Title or Position</h2>
+            </div>
+            <div class="result-card-save">
+              <p>Save</p>
+            </div>
+          </div>
+          <div class="result-card-row2">
+            <img
+              class="result-card-companyimg"
+              src="./image/LOGO UB.png"
+              alt="Company Logo"
+            />
+            <p class="result-card-companyloc">
+              This is the company,<br />Here is the location
             </p>
-            <div class="search-placeholder">
-                <div class="search-keyword ">
-                    <img class="search-icon" src="./image/icon-search.png">
-                    <input type="text" class="search-form" placeholder="keywords">
-                </div>
-                <div class="search-category">
-                    <img class="search-icon" src="./image/icon-category.png">
-                    <select name="select-category" class="search-form">
-                        <option value="all">All</option>
-                        <option value="software">Software Dev.</option>    
-                        <option value="product">Product Dev.</option>
-                        <option value="network">Computer Network</option>
-                        <option value="cybersec">Cyber Security</option>
-                        <option value="design">Design</option>
-                        <option value="marketing">Marketing</option>
-                        <option value="creative">Creative</option>
-                    </select>
-                </div>
-                <div class="search-location">
-                    <img class="search-icon" src="./image/icon-location.png">
-                    <select name="select-location" class="search-form">
-                        <option value="anywhere">Anywhere</option>
-                        <option value="remote">Remote Working</option>
-                        <option value="malang">Malang</option>    
-                        <option value="surabaya">Surabaya</option>
-                        <option value="semarang">Semarang</option>
-                        <option value="solo">Solo</option>
-                        <option value="yogyakarta">Yogyakarta</option>
-                        <option value="bandung">Bandung</option>
-                        <option value="jakarta">Jakarta</option>
-                        <option value="palembang">Palembang</option>
-                        <option value="medan">Medan</option>
-                        <option value="pekanbaru">Pekanbaru</option>
-                        <option value="batam">Batam</option>
-                        <option value="balikpapan">Balikpapan</option>
-                        <option value="banjarmasin">Banjarmasin</option>
-                        <option value="makassar">Makassar</option>
-                        <option value="denpasar">Denpasar</option>
-                        <option value="jayapura">Jayapura</option>
-                        <option value="tembagapura">Tembagapura</option>
-                    </select>
-                </div>
-                <div class="search-button">
-                    <h3>Search</h3>
-                </div>
-            </div>
+          </div>
+          <p class="result-card-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <div class="result-card-button">
+            <h3>Open Detail</h3>
+          </div>
         </div>
-        <div class="main-container">
-            <div class="filter-container">
-                <h2>
-                    Filter from Result
-                </h2>
-                <p>Di sini bakal ad sorting gt tp menyusul y kalau disuruh bapakny ntar</p>
+        <div class="result-card">
+          <div class="result-card-row1">
+            <div class="result-card-title">
+              <h2>Job Title or Position</h2>
             </div>
-            <div class="result-container">
-                <div class="result-card">
-                    <div class="result-card-row1">
-                        <div class="result-card-title">
-                            <h2>Job Title or Position</h2> 
-                        </div>
-                        <div class="result-card-save">
-                            <p>Save</p>
-                        </div>
-                    </div>
-                    <div class="result-card-row2">
-                        <img class="result-card-companyimg" src="./image/LOGO UB.png">
-                        <p class="result-card-companyloc">This is the company,<br>Here is the location</p>
-                    </div>
-                    <p class="result-card-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                    <div class="result-card-button">
-                        <h3>Open Detail</h3>
-                    </div>
-                </div>
-                <div class="result-card">
-                    <div class="result-card-row1">
-                        <div class="result-card-title">
-                            <h2>Job Title or Position</h2> 
-                        </div>
-                        <div class="result-card-save">
-                            <p>Save</p>
-                        </div>
-                    </div>
-                    <div class="result-card-row2">
-                        <img class="result-card-companyimg" src="./image/LOGO UB.png">
-                        <p class="result-card-companyloc">This is the company,<br>Here is the location</p>
-                    </div>
-                    <p class="result-card-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                    <div class="result-card-button">
-                        <h3>Open Detail</h3>
-                    </div>
-                </div>
-                <div class="result-card">
-                    <div class="result-card-row1">
-                        <div class="result-card-title">
-                            <h2>Job Title or Position</h2> 
-                        </div>
-                        <div class="result-card-save">
-                            <p>Save</p>
-                        </div>
-                    </div>
-                    <div class="result-card-row2">
-                        <img class="result-card-companyimg" src="./image/LOGO UB.png">
-                        <p class="result-card-companyloc">This is the company,<br>Here is the location</p>
-                    </div>
-                    <p class="result-card-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                    <div class="result-card-button">
-                        <h3>Open Detail</h3>
-                    </div>
-                </div>
-                <div class="result-card">
-                    <div class="result-card-row1">
-                        <div class="result-card-title">
-                            <h2>Job Title or Position</h2> 
-                        </div>
-                        <div class="result-card-save">
-                            <p>Save</p>
-                        </div>
-                    </div>
-                    <div class="result-card-row2">
-                        <img class="result-card-companyimg" src="./image/LOGO UB.png">
-                        <p class="result-card-companyloc">This is the company,<br>Here is the location</p>
-                    </div>
-                    <p class="result-card-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                    <div class="result-card-button">
-                        <h3>Open Detail</h3>
-                    </div>
-                </div>
-                <div class="result-card">
-                    <div class="result-card-row1">
-                        <div class="result-card-title">
-                            <h2>Job Title or Position</h2> 
-                        </div>
-                        <div class="result-card-save">
-                            <p>Save</p>
-                        </div>
-                    </div>
-                    <div class="result-card-row2">
-                        <img class="result-card-companyimg" src="./image/LOGO UB.png">
-                        <p class="result-card-companyloc">This is the company,<br>Here is the location</p>
-                    </div>
-                    <p class="result-card-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                    <div class="result-card-button">
-                        <h3>Open Detail</h3>
-                    </div>
-                </div>
-                <div class="result-card">
-                    <div class="result-card-row1">
-                        <div class="result-card-title">
-                            <h2>Job Title or Position</h2> 
-                        </div>
-                        <div class="result-card-save">
-                            <p>Save</p>
-                        </div>
-                    </div>
-                    <div class="result-card-row2">
-                        <img class="result-card-companyimg" src="./image/LOGO UB.png">
-                        <p class="result-card-companyloc">This is the company,<br>Here is the location</p>
-                    </div>
-                    <p class="result-card-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                    <div class="result-card-button">
-                        <h3>Open Detail</h3>
-                    </div>
-                </div>
-                <div class="result-card">
-                    <div class="result-card-row1">
-                        <div class="result-card-title">
-                            <h2>Job Title or Position</h2> 
-                        </div>
-                        <div class="result-card-save">
-                            <p>Save</p>
-                        </div>
-                    </div>
-                    <div class="result-card-row2">
-                        <img class="result-card-companyimg" src="./image/LOGO UB.png">
-                        <p class="result-card-companyloc">This is the company,<br>Here is the location</p>
-                    </div>
-                    <p class="result-card-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                    <div class="result-card-button">
-                        <h3>Open Detail</h3>
-                    </div>
-                </div>
-                <div class="result-card">
-                    <div class="result-card-row1">
-                        <div class="result-card-title">
-                            <h2>Job Title or Position</h2> 
-                        </div>
-                        <div class="result-card-save">
-                            <p>Save</p>
-                        </div>
-                    </div>
-                    <div class="result-card-row2">
-                        <img class="result-card-companyimg" src="./image/LOGO UB.png">
-                        <p class="result-card-companyloc">This is the company,<br>Here is the location</p>
-                    </div>
-                    <p class="result-card-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                    <div class="result-card-button">
-                        <h3>Open Detail</h3>
-                    </div>
-                </div>
-                <div class="result-card">
-                    <div class="result-card-row1">
-                        <div class="result-card-title">
-                            <h2>Job Title or Position</h2> 
-                        </div>
-                        <div class="result-card-save">
-                            <p>Save</p>
-                        </div>
-                    </div>
-                    <div class="result-card-row2">
-                        <img class="result-card-companyimg" src="./image/LOGO UB.png">
-                        <p class="result-card-companyloc">This is the company,<br>Here is the location</p>
-                    </div>
-                    <p class="result-card-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                    <div class="result-card-button">
-                        <h3>Open Detail</h3>
-                    </div>
-                </div>
-                <div class="result-card">
-                    <div class="result-card-row1">
-                        <div class="result-card-title">
-                            <h2>Job Title or Position</h2> 
-                        </div>
-                        <div class="result-card-save">
-                            <p>Save</p>
-                        </div>
-                    </div>
-                    <div class="result-card-row2">
-                        <img class="result-card-companyimg" src="./image/LOGO UB.png">
-                        <p class="result-card-companyloc">This is the company,<br>Here is the location</p>
-                    </div>
-                    <p class="result-card-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                    <div class="result-card-button">
-                        <h3>Open Detail</h3>
-                    </div>
-                </div>
+            <div class="result-card-save">
+              <p>Save</p>
             </div>
+          </div>
+          <div class="result-card-row2">
+            <img
+              class="result-card-companyimg"
+              src="./image/LOGO UB.png"
+              alt="Company Logo"
+            />
+            <p class="result-card-companyloc">
+              This is the company,<br />Here is the location
+            </p>
+          </div>
+          <p class="result-card-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <div class="result-card-button">
+            <h3>Open Detail</h3>
+          </div>
         </div>
-        <footer>
-            <div class="container-list-left">
-                <p>Made with love:</p>
-                <h3>SleeveUp!</h3>
+        <div class="result-card">
+          <div class="result-card-row1">
+            <div class="result-card-title">
+              <h2>Job Title or Position</h2>
             </div>
-            <div class="container-list-right">
-                <p>A part of</p>
-                <h3>Brawijaya University</h3>
+            <div class="result-card-save">
+              <p>Save</p>
             </div>
-        </footer>
-    </body>
+          </div>
+          <div class="result-card-row2">
+            <img
+              class="result-card-companyimg"
+              src="./image/LOGO UB.png"
+              alt="Company Logo"
+            />
+            <p class="result-card-companyloc">
+              This is the company,<br />Here is the location
+            </p>
+          </div>
+          <p class="result-card-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <div class="result-card-button">
+            <h3>Open Detail</h3>
+          </div>
+        </div>
+        <div class="result-card">
+          <div class="result-card-row1">
+            <div class="result-card-title">
+              <h2>Job Title or Position</h2>
+            </div>
+            <div class="result-card-save">
+              <p>Save</p>
+            </div>
+          </div>
+          <div class="result-card-row2">
+            <img
+              class="result-card-companyimg"
+              src="./image/LOGO UB.png"
+              alt="Company Logo"
+            />
+            <p class="result-card-companyloc">
+              This is the company,<br />Here is the location
+            </p>
+          </div>
+          <p class="result-card-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <div class="result-card-button">
+            <h3>Open Detail</h3>
+          </div>
+        </div>
+        <div class="result-card">
+          <div class="result-card-row1">
+            <div class="result-card-title">
+              <h2>Job Title or Position</h2>
+            </div>
+            <div class="result-card-save">
+              <p>Save</p>
+            </div>
+          </div>
+          <div class="result-card-row2">
+            <img
+              class="result-card-companyimg"
+              src="./image/LOGO UB.png"
+              alt="Company Logo"
+            />
+            <p class="result-card-companyloc">
+              This is the company,<br />Here is the location
+            </p>
+          </div>
+          <p class="result-card-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <div class="result-card-button">
+            <h3>Open Detail</h3>
+          </div>
+        </div>
+        <div class="result-card">
+          <div class="result-card-row1">
+            <div class="result-card-title">
+              <h2>Job Title or Position</h2>
+            </div>
+            <div class="result-card-save">
+              <p>Save</p>
+            </div>
+          </div>
+          <div class="result-card-row2">
+            <img
+              class="result-card-companyimg"
+              src="./image/LOGO UB.png"
+              alt="Company Logo"
+            />
+            <p class="result-card-companyloc">
+              This is the company,<br />Here is the location
+            </p>
+          </div>
+          <p class="result-card-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <div class="result-card-button">
+            <h3>Open Detail</h3>
+          </div>
+        </div>
+        <div class="result-card">
+          <div class="result-card-row1">
+            <div class="result-card-title">
+              <h2>Job Title or Position</h2>
+            </div>
+            <div class="result-card-save">
+              <p>Save</p>
+            </div>
+          </div>
+          <div class="result-card-row2">
+            <img
+              class="result-card-companyimg"
+              src="./image/LOGO UB.png"
+              alt="Company Logo"
+            />
+            <p class="result-card-companyloc">
+              This is the company,<br />Here is the location
+            </p>
+          </div>
+          <p class="result-card-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <div class="result-card-button">
+            <h3>Open Detail</h3>
+          </div>
+        </div>
+        <div class="result-card">
+          <div class="result-card-row1">
+            <div class="result-card-title">
+              <h2>Job Title or Position</h2>
+            </div>
+            <div class="result-card-save">
+              <p>Save</p>
+            </div>
+          </div>
+          <div class="result-card-row2">
+            <img
+              class="result-card-companyimg"
+              src="./image/LOGO UB.png"
+              alt="Company Logo"
+            />
+            <p class="result-card-companyloc">
+              This is the company,<br />Here is the location
+            </p>
+          </div>
+          <p class="result-card-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <div class="result-card-button">
+            <h3>Open Detail</h3>
+          </div>
+        </div>
+        <div class="result-card">
+          <div class="result-card-row1">
+            <div class="result-card-title">
+              <h2>Job Title or Position</h2>
+            </div>
+            <div class="result-card-save">
+              <p>Save</p>
+            </div>
+          </div>
+          <div class="result-card-row2">
+            <img
+              class="result-card-companyimg"
+              src="./image/LOGO UB.png"
+              alt="Company Logo"
+            />
+            <p class="result-card-companyloc">
+              This is the company,<br />Here is the location
+            </p>
+          </div>
+          <p class="result-card-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <div class="result-card-button">
+            <h3>Open Detail</h3>
+          </div>
+        </div>
+        <div class="result-card">
+          <div class="result-card-row1">
+            <div class="result-card-title">
+              <h2>Job Title or Position</h2>
+            </div>
+            <div class="result-card-save">
+              <p>Save</p>
+            </div>
+          </div>
+          <div class="result-card-row2">
+            <img
+              class="result-card-companyimg"
+              src="./image/LOGO UB.png"
+              alt="Company Logo"
+            />
+            <p class="result-card-companyloc">
+              This is the company,<br />Here is the location
+            </p>
+          </div>
+          <p class="result-card-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <div class="result-card-button">
+            <h3>Open Detail</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container-list-left">
+        <p>Made with ❤️:</p>
+        <h3>SleeveUp!</h3>
+      </div>
+      <div class="container-list-right">
+        <p>A part of</p>
+        <h3>Brawijaya University</h3>
+      </div>
+    </footer>
+  </body>
 </html>
