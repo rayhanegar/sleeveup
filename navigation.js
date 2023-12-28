@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
         try {
             window.location.href = "homepage.html"
         } catch (error) {
-            console.error("Error opening explore.html:", error);
+            console.error("Error opening homepage.html:", error);
         }
     })
 });
