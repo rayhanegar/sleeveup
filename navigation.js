@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", function() {
     
     document.getElementById("sleeveUpNav").addEventListener("click", function() {
         try {
-            window.location.href = "homepage.html";
+            window.location.href = "index.html";
         } catch (error) {
-            console.error("Error opening homepage.html:", error);
+            console.error("Error opening index.html:", error);
         }
     });
 
