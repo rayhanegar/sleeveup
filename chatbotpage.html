@@ -286,7 +286,7 @@
         var userMessageElement = document.createElement("div");
         userMessageElement.textContent = message;
         userMessageElement.className =
-          "bg-blue-500 text-white p-4 mb-2 rounded-xl max-w-96 ml-auto md:max-w-md";
+          "bg-blue-500 text-white p-4 mb-2 rounded-xl max-w-72 ml-auto md:max-w-md";
         chatMessages.appendChild(userMessageElement);
 
         // Call the handleBotResponse function after 2 seconds
@@ -300,7 +300,7 @@
         var botResponseElement = document.createElement("div");
         botResponseElement.textContent = getBotResponse(userMessage);
         botResponseElement.className =
-          "bg-gray-300 text-black p-4 mb-2 rounded-xl max-w-96 md:max-w-md";
+          "bg-gray-300 text-black p-4 mb-2 rounded-xl max-w-72 md:max-w-md";
         chatMessages.appendChild(botResponseElement);
       }
 

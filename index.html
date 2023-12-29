@@ -36,7 +36,7 @@
                 <p class="hero-text">SleeveUp is your one-stop platform to launch your career into the stratosphere. 
                     We're more than just a job board – we're a supportive community, a knowledge hub, 
                     and a springboard to success.</p>
-                <a class="hero-button" href="explore.html">Check it out!</a>
+                <a class="hero-button" href="#show-menu">Check it out!</a>
                 <!-- <img src="image/hero-image.jpg"> -->
             </div>
         </div>
@@ -48,7 +48,7 @@
             <div class="companies-img"></div>
             <div class="companies-img"></div>
         </div>
-        <div class="section-header">
+        <div class="section-header" id="show-menu">
             <h1 class="font-bold">This is SleeveUp!</h1>
             <p>Leverage your potential and find internships and job
                 positions that suit you.
@@ -156,5 +156,11 @@
                 <h3>Brawijaya University</h3>
             </div>
         </footer>
+        <script>
+            document.querySelector('.button-link').addEventListener('click', function(event) {
+                event.preventDefault();
+                document.getElementById('show-menu').scrollIntoView({ behavior: 'smooth' });
+            });
+        </script>        
     </body>
 </html>
